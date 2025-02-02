@@ -1,10 +1,10 @@
 ---
 import Section from '../Section.astro'
 
-import { work } from '@cv_eng'
+import { work } from '@cv'
 ---
 
-<Section title='Work experience'>
+<Section title='Experiencia laboral'>
 	<ul>
 		{
 			work.map(
@@ -33,15 +33,13 @@ import { work } from '@cv_eng'
 
 									<div>
 										<time datetime={totalTime}>{totalTime}</time>
-										{/*
-										<time datetime={startDate} data-title={startDate}>
+										{/* <time datetime={startDate} data-title={startDate}>
 											{startYear}
 										</time>
 										{' - '}
 										<time datetime={endDate} data-title={endDate}>
 											{endYear}
-										</time>
-										*/}
+										</time> */}
 									</div>
 								</header>
 

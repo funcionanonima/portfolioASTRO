@@ -8,25 +8,88 @@ import Education from '@/components/sections/Education.astro'
 import Projects from '@/components/sections/Projects.astro'
 import Hero from '@/components/sections/Hero.astro'
 import Languages from '@/components/sections/Languages.astro'
+import AboutEs from '@/components/sections/AboutEs.astro'
+import HeroEs from '@/components/sections/HeroEs.astro'
+import ExperienceEs from '@/components/sections/ExperienceEs.astro'
+import EducationEs from '@/components/sections/EducationEs.astro'
+import LanguagesEs from '@/components/sections/LanguagesEs.astro'
+import ProjectsEs from '@/components/sections/ProjectsEs.astro'
+import SkillsEs from '@/components/sections/SkillsEs.astro'
 ---
 
-<!-- <Layout title='Portafolio Cristian Gaviria'> -->
-<Layout title='Portfolio Cristian Gaviria'>
-	<main>
-		<Hero />
-		<About />
-		<Experience />
-		<Education />
-		<Languages />
-		<Projects />
-		<Skills />
-	</main>
-</Layout>
+<script>
+	class LangButton extends HTMLElement {
+		connectedCallback() {
+			const langButton = this.querySelector('button')
+			langButton?.addEventListener('click', () => {
+				const currentlang = this.dataset.languaje
+				const elementoEs = this.querySelector('#elemento-es') as HTMLElement
+				const elementoEng = this.querySelector('#elemento-eng') as HTMLElement
+				const newLang = currentlang === 'es' || null ? 'eng' : 'es'
+				this.dataset.languaje = newLang
+				langButton.textContent = newLang === 'es' ? 'Ingles' : 'Spanish'
+				if (this.dataset.languaje === 'es') {
+					elementoEs.style.display = 'block'
+					elementoEng.style.display = 'none'
+				} else {
+					elementoEng.style.display = 'block'
+					elementoEs.style.display = 'none'
+				}
+			})
+		}
+	}
+	customElements.define('lang-button', LangButton)
+</script>
+<Layout title='Portafolio Cristian Gaviria' />
+<main>
+	<lang-button data-languaje='es'>
+		<div id='elemento-es' style='display: block;'>
+			<HeroEs />
+			<AboutEs />
+			<ExperienceEs />
+			<EducationEs />
+			<LanguagesEs />
+			<ProjectsEs />
+			<SkillsEs />
+		</div>
+		<div id='elemento-eng' style='display: none;'>
+			<Hero />
+			<About />
+			<Experience />
+			<Education />
+			<Languages />
+			<Projects />
+			<Skills />
+		</div>
+		<button class='no-print'><span>Ingles</span></button>
+	</lang-button>
+</main>
 
 <style>
 	main {
 		padding: 4rem;
 		margin: auto;
 		width: 100%;
+	}
+	lang-button {
+	}
+	button {
+		background-color: white;
+		color: #777;
+		padding: 10px;
+		border: 1px solid #eee;
+		border-radius: 6px;
+		font-size: 16px;
+		cursor: pointer;
+		transition: background-color 0.3s ease;
+		position: fixed; /* Posición fija en la pantalla */
+		bottom: 20px; /* Distancia desde la parte inferior */
+		right: 20px; /* Distancia desde la parte derecha */
+		padding: 10px 20px; /* Espaciado interno del botón */
+	}
+
+	button:hover {
+		background: #eee;
+		border: 1px solid #ddd;
 	}
 </style>

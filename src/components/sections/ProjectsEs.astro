@@ -2,10 +2,10 @@
 import GitHub from '@/icons/GitHub.astro'
 import Section from '@/components/Section.astro'
 
-import { projects } from '@cv_eng'
+import { projects } from '@cv'
 ---
 
-<Section title='Projects'>
+<Section title='Projectos'>
 	<ul>
 		{
 			projects.map(
@@ -37,8 +37,8 @@ import { projects } from '@cv_eng'
 											href={github}
 											target='_blank'
 											title={`Ver código fuente del proyecto ${name}`}>
-											<GitHub />
-											Repositorio:
+												<GitHub />
+												Repositorio:
 											<p>{github}</p>
 										</a>
 									)}
@@ -104,13 +104,6 @@ import { projects } from '@cv_eng'
 		animation-iteration-count: infinite;
 	}
 
-	img {
-		aspect-ratio: 1 / 1;
-		object-fit: contain;
-		width: 128px;
-		border-radius: 16px;
-	}
-
 	footer {
 		display: flex;
 		flex-wrap: wrap;
@@ -125,6 +118,13 @@ import { projects } from '@cv_eng'
 		font-size: 0.6rem;
 		font-weight: 500;
 		padding: 0.2rem 0.6rem;
+	}
+
+	img {
+		aspect-ratio: 1 / 1;
+		object-fit: contain;
+		width: 128px;
+		border-radius: 16px;
 	}
 
 	.github-code-link {

@@ -1,5 +1,5 @@
 ---
-import { basics } from '@cv_eng'
+import { basics } from '@cv'
 import Section from '@/components/Section.astro'
 import Mail from '@/icons/Mail.astro'
 import Phone from '@/icons/Phone.astro'
@@ -16,6 +16,7 @@ const SOCIAL_ICONS: Record<string, any> = {
 
 const lkInInfo = profiles.find(({ network }) => network === 'LinkedIn')
 const lkUrl = lkInInfo?.url
+
 ---
 
 <Section>
@@ -32,7 +33,7 @@ const lkUrl = lkInInfo?.url
 					email && (
 						<a
 							href={`mailto:${email}`}
-							title={`Send E-mail to ${name} to mail ${email}`}
+							title={`Enviar correo electrónico a ${name} al correo ${email}`}
 							target='_blank'>
 							<Mail />
 						</a>
@@ -42,7 +43,7 @@ const lkUrl = lkInInfo?.url
 					phone && (
 						<a
 							href={`tel:${phone}`}
-							title={`Call to ${name} to the phone ${phone}`}
+							title={`Llamar a ${name} al telefono ${phone}`}
 							target='_blank'>
 							<Phone />
 						</a>
@@ -55,7 +56,7 @@ const lkUrl = lkInInfo?.url
 						return (
 							<a
 								href={url}
-								title={`Take a look at ${name} on ${network}`}
+								title={`Visitar el perfil de ${name} en ${network}`}
 								target='_blank'
 								rel='noopener noreferrer'>
 								<Icon />
@@ -64,8 +65,8 @@ const lkUrl = lkInInfo?.url
 					})
 				}
 			</footer>
-			<p>Email: {email}</p>
-			<p>Phone: {phone}</p>
+			<p>Correo: {email}</p>
+			<p>Telefono: {phone}</p>
 			<p>Linkedin: {lkUrl}</p>
 		</div>
 		<figure>

@@ -1,24 +1,31 @@
 ---
 import Section from '../Section.astro'
 
-import { languages } from '@cv_eng'
+import { education } from '@cv'
 ---
 
-<Section title='Languajes'>
+<Section title='Educación'>
 	<ul>
 		{
-			languages.map(({ language, fluency }) => {
+			education.map(({ institution, startDate, endDate, area }) => {
+				const startYear = new Date(startDate).getFullYear()
+				const endYear =
+					endDate != null ? new Date(endDate).getFullYear() : 'Actual'
+				const years = `${startYear} - ${endYear}`
+
 				return (
 					<li>
 						<article>
 							<header>
 								<div>
-									<h3>{language}</h3>
+									<h3>{institution}</h3>
 								</div>
+
+								<time>{years}</time>
 							</header>
 
 							<footer>
-								<p>{fluency}</p>
+								<p>{area}</p>
 							</footer>
 						</article>
 					</li>
@@ -31,8 +38,8 @@ import { languages } from '@cv_eng'
 <style>
 	ul {
 		display: flex;
-		flex-direction: row;
-		gap: 64px;
+		flex-direction: column;
+		gap: 32px;
 	}
 
 	article h3 {

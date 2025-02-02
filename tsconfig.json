@@ -4,14 +4,14 @@
     "baseUrl": ".",
     "paths": {
       "@cv": [
-        "./cv.json",
+        "./cv.json"
       ],
       "@cv_eng": [
-        "./cv_eng.json",
+        "./cv_eng.json"
       ],
       "@/*": [
         "src/*"
       ]
-    }
+    },
   }
 }

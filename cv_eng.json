@@ -1,10 +1,10 @@
 {
   "basics": {
     "name": "Cristian David Gaviria Zapata",
-    "label": "Full Stack Developer (MERN) more than 3 years of experience",
+    "label": "JavasCript Full Stack Developer (MERN) more than 3 years of experience",
     "image": "/me.png",
     "email": "cristiandgaviria@hotmail.com",
-    "phone": "+3108645574",
+    "phone": "+57 3108645574",
     "url": "#",
     "summary": "+5 years of experience as web developer. I'm focusing on MERN stack at the moment. I´m living in Colombia, with possibilities of residing in spain. I have knowlegde on diferent environments and frameworks like Laravel, Django, React Native. \n with enphasis in React library working at front end. I have the availability and enthusiasm for learning new tchnologies and/or work environments.",
     "location": {
@@ -32,34 +32,38 @@
       "name": "Green",
       "position": "Front End Developer",
       "url": "",
-      "startDate": "2021-11-01",
+      "startDate": "2021-10-01",
       "endDate": "2022-01-01",
+      "totalTime": "3 months",
       "summary": "I provided support in the construction of the FRONTEND application in the REACT library. Receiving data from a DJANGO backend in JSON format. Applying the best practices and corresponding hooks.",
       "highlights": []
     },
     {
       "name": "API google - classroom",
-      "position": "Desarrollo Back End",
+      "position": "Back End Development",
       "url": "#",
-      "startDate": "2021-06-01",
+      "startDate": "2021-04-01",
       "endDate": "2021-07-30",
+      "totalTime": "3 months",
       "summary": "I provided support for creation of resources in the BACKEND using PYTHON and its library flask.",
       "highlights": []
     },
     {
       "name": "ADBConsultores",
       "position": "FullStack Laravel",
-      "startDate": "2020-10-01",
+      "startDate": "2020-09-01",
       "endDate": "2021-06-30",
+      "totalTime": "9 months",
       "url": "#",
       "summary": "I developed a task platform using the LARAVEL framework. Database with their rerspective relathionships and normalization. An API to consume the information, UI for users, Ui for admins. (Login, session, management, middlewares, management of both static and dynamic information, generation of reports)",
       "highlights": []
     },
     {
       "name": "DomiciliosHost",
-      "position": "Desarrollo Front End",
+      "position": "Front End Development",
       "startDate": "2020-05-01",
       "endDate": "2020-07-30",
+      "totalTime": "3 months",
       "url": "#",
       "summary": "I provided support in the layout and constuction of components, state management and the variety of hooks provided by the REACT library in combination with TYPESCRIPT. According to the demands of the sprint and delivery times",
       "highlights": []
@@ -124,7 +128,7 @@
   "skills": [
     {
       "name": "HTML",
-      "level": "Master",
+      "level": "80",
       "keywords": [
         "Web Developer",
         "Frontend"
@@ -132,7 +136,7 @@
     },
     {
       "name": "CSS",
-      "level": "Master",
+      "level": "80",
       "keywords": [
         "Web Developer",
         "Frontend",
@@ -141,7 +145,7 @@
     },
     {
       "name": "JavaScript",
-      "level": "Master",
+      "level": "80",
       "keywords": [
         "Web Developer",
         "Frontend",
@@ -151,7 +155,7 @@
     },
     {
       "name": "Tailwind",
-      "level": "Advanzed",
+      "level": "70",
       "keywords": [
         "Web Developer",
         "Frontend",
@@ -161,7 +165,7 @@
     },
     {
       "name": "TypeScript",
-      "level": "Advanzed",
+      "level": "70",
       "keywords": [
         "Web Developer",
         "Frontend",
@@ -170,7 +174,7 @@
     },
     {
       "name": "Node",
-      "level": "Advanzed",
+      "level": "70",
       "keywords": [
         "Web Developer",
         "Backend",
@@ -180,7 +184,7 @@
     },
     {
       "name": "MySQL",
-      "level": "Advanzed",
+      "level": "70",
       "keywords": [
         "data Bases",
         "SQL",
@@ -190,7 +194,7 @@
     },
     {
       "name": "Git",
-      "level": "Advanzed",
+      "level": "70",
       "keywords": [
         "Version Control",
         "Collab",
@@ -199,7 +203,7 @@
     },
     {
       "name": "GitHub",
-      "level": "Advanzed",
+      "level": "70",
       "keywords": [
         "Version Control",
         "Collab",
@@ -209,7 +213,7 @@
     },
     {
       "name": "Next.js",
-      "level": "Advanzed",
+      "level": "80",
       "keywords": [
         "Web Developer",
         "Frontend",
@@ -220,7 +224,7 @@
     },
     {
       "name": "React",
-      "level": "Advanzed",
+      "level": "90",
       "keywords": [
         "Web Developer",
         "Frontend",
@@ -230,7 +234,7 @@
     },
     {
       "name": "GNULinux",
-      "level": "Medium",
+      "level": "70",
       "keywords": [
         "sys admin"
       ]
@@ -273,30 +277,33 @@
         "Hooks react",
         "ExpressJS"
       ],
-      "url": "https://camicommerce.vercel.app/"
+      "url": "https://camicommerce.vercel.app/",
+      "image": "/cami.png"
     },
     {
       "name": "DashBoard",
       "github": "https://github.com/funcionanonima/nextjs-dashboard",
       "isActive": true,
-      "description": "nextJS tutorial v14",
+      "description": "NextJS tutorial v14",
       "highlights": [
         "NextJS"
       ],
-      "url": "https://nextjs-dashboard-gray-phi-85.vercel.app/dashboard"
+      "url": "https://nextjs-dashboard-gray-phi-85.vercel.app/dashboard",
+      "image": "/dash.png"
     },
     {
       "name": "Store API",
       "github": "https://github.com/funcionanonima/store",
       "isActive": false,
-      "description": "expressJS store backend",
+      "description": "ExpressJS store backend",
       "highlights": [
         "ExpressJS",
         "MongoDB",
         "Mongoose",
         "JWTAuth"
       ],
-      "url": "https://youtu.be/43OV0m0ZZp0"
+      "url": "https://youtu.be/43OV0m0ZZp0",
+      "image": "/api.png"
     },
     {
       "name": "Tagram",
@@ -310,7 +317,8 @@
         "ReactJS",
         "MERN"
       ],
-      "url": "https://youtu.be/C9Qb4QqXdeM"
+      "url": "https://youtu.be/C9Qb4QqXdeM",
+      "image": "/tagram.png"
     }
   ]
 }

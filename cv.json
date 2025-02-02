@@ -1,10 +1,10 @@
 {
   "basics": {
     "name": "Cristian David Gaviria Zapata",
-    "label": "Full Stack Developer (MERN) con más de 3 años de experiencia",
+    "label": "Desarrollador Full Stack JavasCript (MERN) con más de 3 años de experiencia",
     "image": "/me.png",
     "email": "cristiandgaviria@hotmail.com",
-    "phone": "+3108645574",
+    "phone": "+57 3108645574",
     "url": "#",
     "summary": "+5 años de experiencia como Desarrollador Web. Actualmente soy Desarrollador MERN. Vivo en colombia, con posibilidad de residir en españa. Tengo nociones de diferentes entornos y frameworks tales como Laravel, Django, React Native.\n Con enfasís en la biblioteca React en el Front End. Poseo disponibilidad y entusiasmo por aprender nuevas tecnologias y/o entornos de trabajo.",
     "location": {
@@ -32,8 +32,9 @@
       "name": "Green",
       "position": "Desarrollo Front End",
       "url": "www.google.com",
-      "startDate": "2021-11-01",
+      "startDate": "2021-10-01",
       "endDate": "2022-01-01",
+      "totalTime": "3 months",
       "summary": "Brindé apoyo en la construcción de aplicativo FRONTEND en la biblioteca REACT. Recibiendo datos desde un backend DJANGOo en formato JSON. Aplicando las mejores practicas y correspondientes hooks.",
       "highlights": []
     },
@@ -41,16 +42,18 @@
       "name": "API google - classroom",
       "position": "Desarrollo Back End",
       "url": "#",
-      "startDate": "2021-06-01",
+      "startDate": "2021-04-01",
       "endDate": "2021-07-30",
+      "totalTime": "3 months",
       "summary": "Brindé apoyo para la creación de recursos en BACKEND usando PYTHON y su biblioteca flask",
       "highlights": []
     },
     {
       "name": "ADBConsultores",
       "position": "FullStack Laravel",
-      "startDate": "2020-10-01",
+      "startDate": "2020-09-01",
       "endDate": "2021-06-30",
+      "totalTime": "9 months",
       "url": "#",
       "summary": "Desarrollé una plataforma de tareas usando el framework LARAVEL. Base de datos con sus respectivas relaciones y normaización. Una API para consumir la información, UI para usuarios, UI para admins. (Inicio de sesion, manejo de sesion, middlewares, manejo de información tanto estática como dinámica, generación de reportes)",
       "highlights": []
@@ -60,6 +63,7 @@
       "position": "Desarrollo Front End",
       "startDate": "2020-05-01",
       "endDate": "2020-07-30",
+      "totalTime": "3 months",
       "url": "#",
       "summary": "Brindé apoyo en la maquetación y construcción de componentes, manejo de estado y los varios hooks que brinda la biblioteca REACT en combinación con TYPESCRIPT. Deacuerdo a las exigencias del sprint y tiempos de entrega",
       "highlights": []
@@ -124,7 +128,7 @@
   "skills": [
     {
       "name": "HTML",
-      "level": "Master",
+      "level": "80",
       "keywords": [
         "Desarrollo Web",
         "Frontend"
@@ -132,7 +136,7 @@
     },
     {
       "name": "CSS",
-      "level": "Master",
+      "level": "80",
       "keywords": [
         "Desarrollo Web",
         "Frontend",
@@ -141,7 +145,7 @@
     },
     {
       "name": "JavaScript",
-      "level": "Master",
+      "level": "80",
       "keywords": [
         "Desarrollo Web",
         "Frontend",
@@ -151,7 +155,7 @@
     },
     {
       "name": "Tailwind",
-      "level": "Avanzado",
+      "level": "70",
       "keywords": [
         "Desarrollo Web",
         "Frontend",
@@ -161,7 +165,7 @@
     },
     {
       "name": "TypeScript",
-      "level": "Avanzado",
+      "level": "70",
       "keywords": [
         "Desarrollo Web",
         "Frontend",
@@ -171,7 +175,7 @@
     },
     {
       "name": "Node",
-      "level": "Avanzado",
+      "level": "70",
       "keywords": [
         "Desarrollo Web",
         "Backend",
@@ -181,7 +185,7 @@
     },
     {
       "name": "MySQL",
-      "level": "Avanzado",
+      "level": "70",
       "keywords": [
         "Bases de Datos",
         "SQL",
@@ -191,7 +195,7 @@
     },
     {
       "name": "Git",
-      "level": "Avanzado",
+      "level": "70",
       "keywords": [
         "Control de Versiones",
         "Colaboración",
@@ -200,7 +204,7 @@
     },
     {
       "name": "GitHub",
-      "level": "Avanzado",
+      "level": "70",
       "keywords": [
         "Control de Versiones",
         "Colaboración",
@@ -210,7 +214,7 @@
     },
     {
       "name": "Next.js",
-      "level": "Avanzado",
+      "level": "80",
       "keywords": [
         "Desarrollo Web",
         "Frontend",
@@ -221,7 +225,7 @@
     },
     {
       "name": "React",
-      "level": "Avanzado",
+      "level": "90",
       "keywords": [
         "Desarrollo Web",
         "Frontend",
@@ -231,7 +235,7 @@
     },
     {
       "name": "GNULinux",
-      "level": "Medio",
+      "level": "70",
       "keywords": [
         "sys admin"
       ]
@@ -274,7 +278,8 @@
         "Hooks react",
         "ExpressJS"
       ],
-      "url": "https://camicommerce.vercel.app/"
+      "url": "https://camicommerce.vercel.app/",
+      "image": "/cami.png"
     },
     {
       "name": "DashBoard",
@@ -284,7 +289,8 @@
       "highlights": [
         "NextJS"
       ],
-      "url": "https://nextjs-dashboard-gray-phi-85.vercel.app/dashboard"
+      "url": "https://nextjs-dashboard-gray-phi-85.vercel.app/dashboard",
+      "image": "/dash.png"
     },
     {
       "name": "Store API",
@@ -297,7 +303,8 @@
         "Mongoose",
         "JWTAuth"
       ],
-      "url": "https://youtu.be/43OV0m0ZZp0"
+      "url": "https://youtu.be/43OV0m0ZZp0",
+      "image": "/api.png"
     },
     {
       "name": "Tagram",
@@ -311,7 +318,8 @@
         "ReactJS",
         "MERN"
       ],
-      "url": "https://youtu.be/C9Qb4QqXdeM"
+      "url": "https://youtu.be/C9Qb4QqXdeM",
+      "image": "/tagram.png"
     }
   ]
 }
