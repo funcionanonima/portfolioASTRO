@@ -3,11 +3,12 @@ import { basics } from '@cv'
 import Section from '@/components/Section.astro'
 import Mail from '@/icons/Mail.astro'
 import Phone from '@/icons/Phone.astro'
+import Phone2 from '@/icons/Phone2.astro'
 import GitHub from '@/icons/GitHub.astro'
 import LinkedIn from '@/icons/LinkedIn.astro'
 import WorldMap from '@/icons/WorldMap.astro'
 
-const { name, label, image, location, profiles, phone, email } = basics
+const { name, label, image, location, profiles, phone, phone2, email } = basics
 const { city, region } = location
 const SOCIAL_ICONS: Record<string, any> = {
 	GitHub,
@@ -50,6 +51,16 @@ const lkUrl = lkInInfo?.url
 					)
 				}
 				{
+					phone2 && (
+						<a
+							href={`tel:${phone2}`}
+							title={`Llamar a ${name} al telefono ${phone2}`}
+							target='_blank'>
+							<Phone2 />
+						</a>
+					)
+				}
+				{
 					profiles.map(({ network, url, username }) => {
 						const Icon = SOCIAL_ICONS[network]
 
@@ -67,6 +78,7 @@ const lkUrl = lkInInfo?.url
 			</footer>
 			<p>Correo: {email}</p>
 			<p>Telefono: {phone}</p>
+			<p>Telefono 2: {phone2}</p>
 			<p>Linkedin: {lkUrl}</p>
 		</div>
 		<figure>
