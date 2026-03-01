@@ -1,27 +1,34 @@
 ---
-import Section from '../Section.astro'
+import Section from "../Section.astro";
+import type { Education } from "@/types";
 
-import { education } from '@cv_eng'
+interface Props {
+	title: string;
+	education: Education[];
+}
+
+const { title, education } = Astro.props;
 ---
 
-<Section title='Education'>
+<Section title={title}>
 	<ul>
 		{
 			education.map(({ institution, startDate, endDate, area }) => {
-				const startYear = new Date(startDate).getFullYear()
+				const startYear = new Date(startDate).getFullYear();
 				const endYear =
-					endDate != null ? new Date(endDate).getFullYear() : 'Actual'
-				const years = `${startYear} - ${endYear}`
+					endDate != null ? new Date(endDate).getFullYear() : "Actual";
+				const years = `${startYear} - ${endYear}`;
 
 				return (
 					<li>
 						<article>
 							<header>
 								<div>
-									<h3>{institution}</h3>
+									<h2>
+										{institution}
+										<time>{years}</time>
+									</h2>
 								</div>
-
-								<time>{years}</time>
 							</header>
 
 							<footer>
@@ -29,7 +36,7 @@ import { education } from '@cv_eng'
 							</footer>
 						</article>
 					</li>
-				)
+				);
 			})
 		}
 	</ul>
@@ -40,18 +47,6 @@ import { education } from '@cv_eng'
 		display: flex;
 		flex-direction: column;
 		gap: 32px;
-	}
-
-	article h3 {
-		font-weight: 500;
-		color: #111;
-	}
-
-	header {
-		display: flex;
-		justify-content: space-between;
-		align-items: flex-start;
-		margin-bottom: 4px;
 	}
 
 	time {

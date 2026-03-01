@@ -271,7 +271,7 @@
       "name": "Camicommerce",
       "github": "https://github.com/funcionanonima/camicommerce",
       "isActive": true,
-      "description": "Ecommerce fullstack MERN clon",
+      "description": "Ecommerce fullstack MERN",
       "highlights": [
         "Ecommerce",
         "PayPal",
@@ -280,17 +280,6 @@
       ],
       "url": "https://camicommerce.vercel.app/",
       "image": "/cami.png"
-    },
-    {
-      "name": "DashBoard",
-      "github": "https://github.com/funcionanonima/nextjs-dashboard",
-      "isActive": true,
-      "description": "NextJS tutorial v14",
-      "highlights": [
-        "NextJS"
-      ],
-      "url": "https://nextjs-dashboard-gray-phi-85.vercel.app/dashboard",
-      "image": "/dash.png"
     },
     {
       "name": "Store API",
@@ -310,7 +299,7 @@
       "name": "Tagram",
       "github": "",
       "isActive": false,
-      "description": "Instagram MERN clon",
+      "description": "Instagram MERN",
       "highlights": [
         "ExpressJS",
         "MongoDB",

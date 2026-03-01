@@ -1,10 +1,16 @@
 ---
-import Section from '../Section.astro'
+import Section from "../Section.astro";
+import type { Work } from "@/types";
 
-import { work } from '@cv_eng'
+interface Props {
+	title: string;
+	work: Work[];
+}
+
+const { title, work } = Astro.props;
 ---
 
-<Section title='Work experience'>
+<Section title={title}>
 	<ul>
 		{
 			work.map(
@@ -18,31 +24,20 @@ import { work } from '@cv_eng'
 					url,
 					totalTime,
 				}) => {
-					const startYear = new Date(startDate).getFullYear()
+					const startYear = new Date(startDate).getFullYear();
 					const endYear =
-						endDate != null ? new Date(endDate).getFullYear() : 'Actual'
+						endDate != null ? new Date(endDate).getFullYear() : "Actual";
 
 					return (
 						<li>
 							<article>
 								<header>
-									<div>
-										<h1>{name}</h1>
-										<h4>{position}</h4>
-									</div>
-
-									<div>
+									<h5 class="info" style="margin-bottom: 8px;">
+										{position} en {name}
+									</h5>
+									{/* <div>
 										<time datetime={totalTime}>{totalTime}</time>
-										{/*
-										<time datetime={startDate} data-title={startDate}>
-											{startYear}
-										</time>
-										{' - '}
-										<time datetime={endDate} data-title={endDate}>
-											{endYear}
-										</time>
-										*/}
-									</div>
+									</div> */}
 								</header>
 
 								<footer>
@@ -50,7 +45,7 @@ import { work } from '@cv_eng'
 								</footer>
 							</article>
 						</li>
-					)
+					);
 				},
 			)
 		}
@@ -82,18 +77,15 @@ import { work } from '@cv_eng'
 		font-weight: 400;
 	}
 
-	header {
-		display: flex;
-		justify-content: space-between;
-		align-items: flex-start;
-		margin-bottom: 4px;
-	}
-
 	time {
 		color: #555;
 		font-size: 0.85rem;
 		min-width: 102px;
 		cursor: default;
+	}
+
+	p {
+		text-align: justify;
 	}
 
 	[data-title]:hover:after {
@@ -111,7 +103,7 @@ import { work } from '@cv_eng'
 			Menlo,
 			Monaco,
 			Lucida Console,
-			'Courier New',
+			"Courier New",
 			monospace;
 		position: absolute;
 		padding: 0.2rem 0.5rem;

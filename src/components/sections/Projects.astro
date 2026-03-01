@@ -1,11 +1,17 @@
 ---
-import GitHub from '@/icons/GitHub.astro'
-import Section from '@/components/Section.astro'
+import GitHub from "@/icons/GitHub.astro";
+import Section from "@/components/Section.astro";
+import type { Project } from "@/types";
 
-import { projects } from '@cv_eng'
+interface Props {
+	title: string;
+	projects: Project[];
+}
+
+const { title, projects } = Astro.props;
 ---
 
-<Section title='Projects'>
+<Section title={title}>
 	<ul>
 		{
 			projects.map(
@@ -15,14 +21,9 @@ import { projects } from '@cv_eng'
 							<article>
 								<header>
 									<h3>
-										<a href={url} title={`Ver proyecto ${name}`}>
-											{name}
-											<p>
-												{isActive && <span>•</span>}
-												{url}
-											</p>
-										</a>
+										{name}
 									</h3>
+									<a style="margin: 8px;" href={url} title={`Ver proyecto ${name}`}>{url}</a>
 									{image && (
 										<a href={url} title={`Ver proyecto ${name}`}>
 											<figure>
@@ -30,27 +31,26 @@ import { projects } from '@cv_eng'
 											</figure>
 										</a>
 									)}
-									<p style='padding-bottom:24px'>{description}</p>
-									{github && (
+									<p>{description}</p>
+									{github && (								
+									<h5><GitHub /> Repositorio:</h5>
 										<a
-											class='github-code-link'
 											href={github}
-											target='_blank'
-											title={`Ver código fuente del proyecto ${name}`}>
-											<GitHub />
-											Repositorio:
-											<p>{github}</p>
+											target="_blank"
+											title={`Ver código fuente del proyecto ${name}`}
+										>
+										{github}
 										</a>
 									)}
 								</header>
 								<footer>
 									{highlights.map((highlight) => {
-										return <span>{highlight}</span>
+										return <span>{highlight}</span>;
 									})}
 								</footer>
 							</article>
 						</li>
-					)
+					);
 				},
 			)
 		}
@@ -59,9 +59,8 @@ import { projects } from '@cv_eng'
 <style>
 	ul {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		grid-template-columns: 1fr;
 		gap: 1rem;
-		margin-inline: -16px;
 	}
 
 	article {
@@ -72,10 +71,15 @@ import { projects } from '@cv_eng'
 		flex-direction: column;
 		padding: 16px;
 		height: 100%;
+		align-items: center;
+		text-align: center;
 	}
 
 	article header {
 		flex: 1;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 	}
 
 	article h3 {
@@ -94,6 +98,7 @@ import { projects } from '@cv_eng'
 		font-size: 0.75rem;
 		line-height: 1.2rem;
 		margin-bottom: 4px;
+		text-align: justify;
 	}
 
 	article h3 span {
@@ -102,6 +107,13 @@ import { projects } from '@cv_eng'
 		animation-duration: 3s;
 		animation-timing-function: ease-in;
 		animation-iteration-count: infinite;
+	}
+
+	figure {
+		margin: 0;
+		padding: 0;
+		display: flex;
+		justify-content: center;
 	}
 
 	img {
@@ -116,6 +128,7 @@ import { projects } from '@cv_eng'
 		flex-wrap: wrap;
 		gap: 4px;
 		font-size: 0.6rem;
+		justify-content: center;
 	}
 
 	footer span {
@@ -128,7 +141,11 @@ import { projects } from '@cv_eng'
 	}
 
 	.github-code-link {
-		margin-left: 5px;
+		margin-top: 8px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 4px;
 	}
 
 	@keyframes flicker {

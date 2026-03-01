@@ -1,67 +1,117 @@
 ---
-import Layout from '@/layouts/Layout.astro'
+import Layout from "@/layouts/Layout.astro";
 
-import Experience from '@/components/sections/Experience.astro'
-import About from '@/components/sections/About.astro'
-import Skills from '@/components/sections/Skills.astro'
-import Education from '@/components/sections/Education.astro'
-import Projects from '@/components/sections/Projects.astro'
-import Hero from '@/components/sections/Hero.astro'
-import Languages from '@/components/sections/Languages.astro'
-import AboutEs from '@/components/sections/AboutEs.astro'
-import HeroEs from '@/components/sections/HeroEs.astro'
-import ExperienceEs from '@/components/sections/ExperienceEs.astro'
-import EducationEs from '@/components/sections/EducationEs.astro'
-import LanguagesEs from '@/components/sections/LanguagesEs.astro'
-import ProjectsEs from '@/components/sections/ProjectsEs.astro'
-import SkillsEs from '@/components/sections/SkillsEs.astro'
+import Experience from "@/components/sections/Experience.astro";
+import About from "@/components/sections/About.astro";
+import Skills from "@/components/sections/Skills.astro";
+import Education from "@/components/sections/Education.astro";
+import Projects from "@/components/sections/Projects.astro";
+import Hero from "@/components/sections/Hero.astro";
+import Languages from "@/components/sections/Languages.astro";
+
+import cvEs from "@cv";
+import cvEn from "@cv_eng";
+
+const i18n = {
+	es: {
+		hero: {
+			email: "Correo",
+			phone: "Telefono",
+			phone2: "Telefono 2",
+			linkedin: "Linkedin",
+			mailTitle: "Enviar correo electrónico a",
+			phoneTitle: "Llamar a",
+			socialTitle: "Visitar el perfil de",
+		},
+		aboutTitle: "Acerca de..",
+		experienceTitle: "Experiencia laboral",
+		educationTitle: "Educación",
+		languagesTitle: "Idiomas",
+		projectsTitle: "Proyectos",
+		skillsTitle: "Habilidades",
+	},
+	en: {
+		hero: {
+			email: "Email",
+			phone: "Phone",
+			phone2: "Phone 2",
+			linkedin: "Linkedin",
+			mailTitle: "Send E-mail to",
+			phoneTitle: "Call to",
+			socialTitle: "Take a look at",
+		},
+		aboutTitle: "About..",
+		experienceTitle: "Work experience",
+		educationTitle: "Education",
+		languagesTitle: "Languages",
+		projectsTitle: "Projects",
+		skillsTitle: "Skills",
+	},
+};
 ---
 
 <script>
 	class LangButton extends HTMLElement {
 		connectedCallback() {
-			const langButton = this.querySelector('button')
-			langButton?.addEventListener('click', () => {
-				const currentlang = this.dataset.languaje
-				const elementoEs = this.querySelector('#elemento-es') as HTMLElement
-				const elementoEng = this.querySelector('#elemento-eng') as HTMLElement
-				const newLang = currentlang === 'es' || null ? 'eng' : 'es'
-				this.dataset.languaje = newLang
-				langButton.textContent = newLang === 'es' ? 'Ingles' : 'Spanish'
-				if (this.dataset.languaje === 'es') {
-					elementoEs.style.display = 'block'
-					elementoEng.style.display = 'none'
-				} else {
-					elementoEng.style.display = 'block'
-					elementoEs.style.display = 'none'
+			const langButton = this.querySelector("button");
+			const elementoEs = this.querySelector("#elemento-es") as HTMLElement;
+			const elementoEng = this.querySelector("#elemento-eng") as HTMLElement;
+
+			const updateDisplay = (lang: string) => {
+				this.dataset.languaje = lang;
+				if (langButton) {
+					langButton.textContent = lang === "es" ? "Ingles" : "Spanish";
 				}
-			})
+				if (lang === "es") {
+					elementoEs.style.display = "block";
+					elementoEng.style.display = "none";
+				} else {
+					elementoEng.style.display = "block";
+					elementoEs.style.display = "none";
+				}
+			};
+
+			// Initialize from localStorage or default to 'es'
+			const savedLang = localStorage.getItem("preferred-lang") || "es";
+			updateDisplay(savedLang);
+
+			langButton?.addEventListener("click", () => {
+				const currentlang = this.dataset.languaje;
+				const newLang = currentlang === "es" ? "eng" : "es";
+				localStorage.setItem("preferred-lang", newLang);
+				updateDisplay(newLang);
+			});
 		}
 	}
-	customElements.define('lang-button', LangButton)
+	customElements.define("lang-button", LangButton);
 </script>
-<Layout title='Portafolio Cristian Gaviria' />
+
+<Layout title="Portafolio Cristian Gaviria" />
 <main>
-	<lang-button data-languaje='es'>
-		<div id='elemento-es' style='display: block;'>
-			<HeroEs />
-			<AboutEs />
-			<ExperienceEs />
-			<EducationEs />
-			<LanguagesEs />
-			<ProjectsEs />
-			<SkillsEs />
+	<lang-button data-languaje="es">
+		<div id="elemento-es" style="display: block;">
+			<Hero basics={cvEs.basics} labels={i18n.es.hero} />
+			<About title={i18n.es.aboutTitle} summary={cvEs.basics.summary} />
+			<div class="about-grid">
+				<Education title={i18n.es.educationTitle} education={cvEs.education} />
+				<Languages title={i18n.es.languagesTitle} languages={cvEs.languages} />
+			</div>
+			<Experience title={i18n.es.experienceTitle} work={cvEs.work} />
+			<Projects title={i18n.es.projectsTitle} projects={cvEs.projects} />
+			<Skills title={i18n.es.skillsTitle} skills={cvEs.skills} />
 		</div>
-		<div id='elemento-eng' style='display: none;'>
-			<Hero />
-			<About />
-			<Experience />
-			<Education />
-			<Languages />
-			<Projects />
-			<Skills />
+		<div id="elemento-eng" style="display: none;">
+			<Hero basics={cvEn.basics} labels={i18n.en.hero} />
+			<About title={i18n.en.aboutTitle} summary={cvEn.basics.summary} />
+			<div class="about-grid">
+				<Education title={i18n.en.educationTitle} education={cvEn.education} />
+				<Languages title={i18n.en.languagesTitle} languages={cvEn.languages} />
+			</div>
+			<Experience title={i18n.en.experienceTitle} work={cvEn.work} />
+			<Projects title={i18n.en.projectsTitle} projects={cvEn.projects} />
+			<Skills title={i18n.en.skillsTitle} skills={cvEn.skills} />
 		</div>
-		<button class='no-print'><span>Ingles</span></button>
+		<button class="no-print"><span>Ingles</span></button>
 	</lang-button>
 </main>
 
@@ -91,5 +141,20 @@ import SkillsEs from '@/components/sections/SkillsEs.astro'
 	button:hover {
 		background: #eee;
 		border: 1px solid black;
+	}
+
+	.about-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 2rem;
+		max-width: 700px;
+		margin: 0 auto;
+	}
+
+	@media (width <= 700px) {
+		.about-grid {
+			grid-template-columns: 1fr;
+			gap: 1rem;
+		}
 	}
 </style>

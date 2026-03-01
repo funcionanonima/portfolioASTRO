@@ -272,7 +272,7 @@
       "name": "Camicommerce",
       "github": "https://github.com/funcionanonima/camicommerce",
       "isActive": true,
-      "description": "Clon de tienda ecommerce fullstack MERN",
+      "description": "Tienda ecommerce fullstack MERN",
       "highlights": [
         "Ecommerce",
         "Plataforma PayPal",
@@ -281,17 +281,6 @@
       ],
       "url": "https://camicommerce.vercel.app/",
       "image": "/cami.png"
-    },
-    {
-      "name": "DashBoard",
-      "github": "https://github.com/funcionanonima/nextjs-dashboard",
-      "isActive": true,
-      "description": "Tutorial usando la version 14 de nextJS",
-      "highlights": [
-        "NextJS"
-      ],
-      "url": "https://nextjs-dashboard-gray-phi-85.vercel.app/dashboard",
-      "image": "/dash.png"
     },
     {
       "name": "Store API",
@@ -311,7 +300,7 @@
       "name": "Tagram",
       "github": "",
       "isActive": false,
-      "description": "Clon de la red social instagram con el stack MERN",
+      "description": "Red social stack MERN",
       "highlights": [
         "ExpressJS",
         "MongoDB",
