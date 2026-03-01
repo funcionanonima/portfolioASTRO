@@ -20,34 +20,54 @@ const { title, projects } = Astro.props;
 						<li>
 							<article>
 								<header>
-									<h3>
-										{name}
-									</h3>
-									<a style="margin: 8px;" href={url} title={`Ver proyecto ${name}`}>{url}</a>
-									{image && (
-										<a href={url} title={`Ver proyecto ${name}`}>
-											<figure>
-												<img src={image} alt={name} />
-											</figure>
-										</a>
-									)}
-									<p>{description}</p>
-									{github && (								
-									<h5><GitHub /> Repositorio:</h5>
+									<div class="project-title-container">
+										<h3>{name}</h3>
 										<a
-											href={github}
+											href={url}
+											title={`Ver proyecto ${name}`}
 											target="_blank"
-											title={`Ver código fuente del proyecto ${name}`}
 										>
-										{github}
+											{url}
 										</a>
-									)}
+									</div>
+									<div class="project-content">
+										{image && (
+											<div class="project-image">
+												<a
+													href={url}
+													title={`Ver proyecto ${name}`}
+													target="_blank"
+												>
+													<figure>
+														<img src={image} alt={name} />
+													</figure>
+												</a>
+											</div>
+										)}
+										<div class="project-details">
+											<p style="text-align: center;">{description}</p>
+											{github && (
+												<div class="github-link">
+													<h5>
+														<GitHub /> Repositorio:
+													</h5>
+													<a
+														href={github}
+														target="_blank"
+														title={`Ver código fuente del proyecto ${name}`}
+													>
+														{github}
+													</a>
+												</div>
+											)}
+											<footer>
+												{highlights.map((highlight) => (
+													<span>{highlight}</span>
+												))}
+											</footer>
+										</div>
+									</div>
 								</header>
-								<footer>
-									{highlights.map((highlight) => {
-										return <span>{highlight}</span>;
-									})}
-								</footer>
 							</article>
 						</li>
 					);
@@ -60,121 +80,163 @@ const { title, projects } = Astro.props;
 	ul {
 		display: grid;
 		grid-template-columns: 1fr;
-		gap: 1rem;
+		gap: 1.5rem;
 	}
 
 	article {
-		border-radius: 8px;
+		border-radius: 12px;
 		border: 1px solid #f2f2f2;
-		gap: 16px;
+		padding: 24px;
+		height: 100%;
+		transition: all 0.3s ease;
+		background: #fff;
+	}
+
+	article:hover {
+		border-color: #ddd;
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+	}
+
+	article header {
 		display: flex;
 		flex-direction: column;
-		padding: 16px;
-		height: 100%;
+		gap: 16px;
+	}
+
+	.project-title-container {
+		display: flex;
+		flex-direction: column;
+		gap: 4px;
+		border-bottom: 1px solid #f8f8f8;
+		padding-bottom: 12px;
 		align-items: center;
 		text-align: center;
 	}
 
-	article header {
-		flex: 1;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
-
 	article h3 {
-		margin-bottom: 4px;
+		margin: 0;
+		font-size: 1.25rem;
+		font-weight: 700;
 	}
 
-	article a {
+	.project-title-container a {
+		font-size: 0.85rem;
+		color: #666;
+		text-decoration: none;
+		word-break: break-all;
+	}
+
+	.project-title-container a:hover {
 		color: #111;
-	}
-
-	article a:hover {
 		text-decoration: underline;
 	}
 
-	article p {
-		font-size: 0.75rem;
-		line-height: 1.2rem;
-		margin-bottom: 4px;
-		text-align: justify;
+	.project-content {
+		display: grid;
+		grid-template-columns: auto 1fr;
+		gap: 24px;
+		align-items: start;
 	}
 
-	article h3 span {
-		color: rgb(0, 188, 47);
-		animation-name: flicker;
-		animation-duration: 3s;
-		animation-timing-function: ease-in;
-		animation-iteration-count: infinite;
+	.project-image {
+		flex-shrink: 0;
 	}
 
 	figure {
 		margin: 0;
 		padding: 0;
-		display: flex;
-		justify-content: center;
 	}
 
 	img {
-		aspect-ratio: 1 / 1;
-		object-fit: contain;
-		width: 128px;
-		border-radius: 16px;
+		aspect-ratio: 16 / 9;
+		object-fit: cover;
+		width: 240px;
+		border-radius: 8px;
+		border: 1px solid #eee;
+		background: #fdfdfd;
+	}
+
+	.project-details {
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+		text-align: left;
+	}
+
+	article p {
+		font-size: 0.9rem;
+		line-height: 1.5;
+		margin: 0;
+		color: #444;
+		text-align: justify;
+	}
+
+	.github-link {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 8px;
+		font-size: 0.85rem;
+	}
+
+	.github-link h5 {
+		margin: 0;
+		display: flex;
+		align-items: center;
+		gap: 4px;
+		font-size: 0.85rem;
+		font-weight: 600;
+	}
+
+	.github-link a {
+		color: #666;
+		text-decoration: none;
+		word-break: break-all;
+	}
+
+	.github-link a:hover {
+		color: #111;
+		text-decoration: underline;
 	}
 
 	footer {
 		display: flex;
 		flex-wrap: wrap;
-		gap: 4px;
-		font-size: 0.6rem;
+		gap: 6px;
+		margin-top: 4px;
 		justify-content: center;
 	}
 
 	footer span {
-		border-radius: 6px;
-		background: #eee;
-		color: #444;
-		font-size: 0.6rem;
-		font-weight: 500;
-		padding: 0.2rem 0.6rem;
+		border-radius: 4px;
+		background: #f0f0f0;
+		color: #555;
+		font-size: 0.7rem;
+		font-weight: 600;
+		padding: 4px 10px;
+		text-transform: uppercase;
+		letter-spacing: 0.02em;
 	}
 
-	.github-code-link {
-		margin-top: 8px;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		gap: 4px;
-	}
+	@media (max-width: 768px) {
+		.project-content {
+			grid-template-columns: 1fr;
+			gap: 16px;
+		}
 
-	@keyframes flicker {
-		0% {
-			opacity: 1;
-		}
-		50% {
-			opacity: 0.25;
-		}
-		100% {
-			opacity: 1;
-		}
-	}
-
-	@media (width <= 700px) {
-		ul {
-			margin-inline: 0px;
+		img {
+			width: 100%;
+			max-width: 100%;
 		}
 
 		article {
-			border: none;
-			box-shadow: 0 1px 1px #f2f2f2;
-			padding: 0 0 16px 0;
+			padding: 16px;
 		}
 	}
 
 	@media print {
-		article h3 span {
-			animation-name: none;
+		article {
+			border: 1px solid #000;
 		}
 	}
 </style>

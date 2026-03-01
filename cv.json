@@ -2,7 +2,7 @@
   "basics": {
     "name": "Cristian David Gaviria Zapata",
     "label": "Desarrollador Full Stack JavasCript (MERN) con más de 3 años de experiencia",
-    "image": "/me.png",
+    "image": "https://res.cloudinary.com/djazfg2sr/image/upload/v1772403406/portfolio/me_ri1tnd.png",
     "email": "cristiandgaviria@hotmail.com",
     "phone": "+57 3108645574",
     "phone2": "+57 3178672158",
@@ -269,8 +269,62 @@
   ],
   "projects": [
     {
+      "name": "Cart",
+      "github": "https://github.com/funcionanonima/react_canon/tree/main/projects/06-shopping-cart",
+      "isActive": true,
+      "description": "Aplicacion react - Carro de compras, context hooks",
+      "highlights": [
+        "React",
+        "React Hooks",
+        "Custom hooks",
+        "Context Hooks"
+      ],
+      "url": "https://cart-two-beryl.vercel.app/",
+      "image": "https://res.cloudinary.com/djazfg2sr/image/upload/v1772403396/portfolio/06_wvgkbv.png"
+    },
+    {
+      "name": "Movies Finder",
+      "github": "https://github.com/funcionanonima/react_canon/tree/main/projects/05-prueba-tecnica-Jr",
+      "isActive": true,
+      "description": "Aplicacion react - Buscador peliculas, usando hooks de alto nivel, custom hooks y optimización de rendimiento",
+      "highlights": [
+        "React",
+        "React Hooks",
+        "Custom hooks",
+        "API",
+        "Debounce"
+      ],
+      "url": "https://moviefinder-gold.vercel.app/",
+      "image": "https://res.cloudinary.com/djazfg2sr/image/upload/v1772403394/portfolio/05_qcwn1o.png"
+    },
+    {
+      "name": "Facts Cats",
+      "github": "https://github.com/funcionanonima/react_canon/tree/main/projects/04-react-prueba-tecnica",
+      "isActive": true,
+      "description": "Aplicacion react - Echos de gatos",
+      "highlights": [
+        "React",
+        "React Hooks",
+        "API"
+      ],
+      "url": "https://catfacts-ashy.vercel.app/",
+      "image": "https://res.cloudinary.com/djazfg2sr/image/upload/v1772403393/portfolio/04_h5n8rs.png"
+    },
+    {
+      "name": "Tree kee",
+      "github": "https://github.com/funcionanonima/react_canon/tree/main/projects/02-Tree-kee",
+      "isActive": true,
+      "description": "Aplicacion react - Juego Tree - kee",
+      "highlights": [
+        "React",
+        "React Hooks"
+      ],
+      "url": "https://treekee.vercel.app/",
+      "image": "https://res.cloudinary.com/djazfg2sr/image/upload/v1772403391/portfolio/03_bhot4j.png"
+    },
+    {
       "name": "Camicommerce",
-      "github": "https://github.com/funcionanonima/camicommerce",
+      "github": "",
       "isActive": true,
       "description": "Tienda ecommerce fullstack MERN",
       "highlights": [
@@ -280,7 +334,7 @@
         "ExpressJS"
       ],
       "url": "https://camicommerce.vercel.app/",
-      "image": "/cami.png"
+      "image": "https://res.cloudinary.com/djazfg2sr/image/upload/v1772403400/portfolio/cami_curiqz.png"
     },
     {
       "name": "Store API",
@@ -294,7 +348,7 @@
         "JWTAuth"
       ],
       "url": "https://youtu.be/43OV0m0ZZp0",
-      "image": "/api.png"
+      "image": "https://res.cloudinary.com/djazfg2sr/image/upload/v1772403398/portfolio/api_qptxfl.png"
     },
     {
       "name": "Tagram",
@@ -309,7 +363,7 @@
         "MERN"
       ],
       "url": "https://youtu.be/C9Qb4QqXdeM",
-      "image": "/tagram.png"
+      "image": "https://res.cloudinary.com/djazfg2sr/image/upload/v1772403409/portfolio/tagram_cjkgcp.png"
     }
   ]
 }

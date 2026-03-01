@@ -23,11 +23,9 @@ const { title, education } = Astro.props;
 					<li>
 						<article>
 							<header>
-								<div>
-									<h2>
-										{institution}
-										<time>{years}</time>
-									</h2>
+								<div class="education-header">
+									<h3>{institution}</h3>
+									<time>{years}</time>
 								</div>
 							</header>
 
@@ -44,20 +42,66 @@ const { title, education } = Astro.props;
 
 <style>
 	ul {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 1.5rem;
+	}
+
+	article {
+		border-radius: 12px;
+		border: 1px solid #f2f2f2;
+		padding: 24px;
+		height: 100%;
+		transition: all 0.3s ease;
+		background: #fff;
 		display: flex;
 		flex-direction: column;
-		gap: 32px;
+		gap: 12px;
+	}
+
+	article:hover {
+		border-color: #ddd;
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+	}
+
+	.education-header {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+		gap: 4px;
+	}
+
+	article h3 {
+		margin: 0;
+		font-size: 1.15rem;
+		font-weight: 700;
+		color: #111;
 	}
 
 	time {
-		color: #555;
+		color: #666;
 		font-size: 0.85rem;
-		min-width: 102px;
+		font-weight: 500;
+		white-space: nowrap;
 	}
 
-	@media (width <= 700px) {
-		time {
-			text-align: right;
+	footer p {
+		margin: 0;
+		font-size: 0.9rem;
+		color: #444;
+		line-height: 1.5;
+		text-align: justify;
+	}
+
+	@media (max-width: 768px) {
+		.education-header {
+			flex-direction: column;
+			gap: 4px;
+		}
+
+		article {
+			padding: 16px;
 		}
 	}
 </style>

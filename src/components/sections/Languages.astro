@@ -18,9 +18,7 @@ const { title, languages } = Astro.props;
           <li>
             <article>
               <header>
-                <div>
-                  <h3>{language}</h3>
-                </div>
+                <h3>{language}</h3>
               </header>
 
               <footer>
@@ -36,27 +34,51 @@ const { title, languages } = Astro.props;
 
 <style>
   ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+  }
+
+  article {
+    border-radius: 12px;
+    border: 1px solid #f2f2f2;
+    padding: 20px;
+    height: 100%;
+    transition: all 0.3s ease;
+    background: #fff;
     display: flex;
-    flex-direction: row;
-    gap: 64px;
-    justify-content: center;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+
+  article:hover {
+    border-color: #ddd;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   }
 
   article h3 {
-    font-weight: 500;
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 700;
     color: #111;
   }
 
-  time {
-    color: #555;
+  footer p {
+    margin: 0;
     font-size: 0.85rem;
-    min-width: 102px;
+    color: #666;
+    font-weight: 500;
+    text-align: justify;
   }
 
-  @media (width <= 700px) {
-    time {
-      text-align: right;
+  @media (max-width: 768px) {
+    ul {
+      grid-template-columns: 1fr;
+    }
+
+    article {
+      padding: 16px;
     }
   }
 </style>
