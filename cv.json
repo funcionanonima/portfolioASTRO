@@ -1,13 +1,13 @@
 {
   "basics": {
-    "name": "Cristian David Gaviria Zapata",
-    "label": "Desarrollador Full Stack JavasCript (MERN) con más de 3 años de experiencia",
-    "image": "https://res.cloudinary.com/djazfg2sr/image/upload/v1772403406/portfolio/me_ri1tnd.png",
+    "name": "Cristian David\n Gaviria Zapata",
+    "label": "Desarrollador Full Stack JavasCript. Con más de 5 años de experiencia",
+    "image": "https://res.cloudinary.com/djazfg2sr/image/upload/v1781734573/portfolio/me2.jpg",
     "email": "cristiandgaviria@hotmail.com",
     "phone": "+57 3108645574",
     "phone2": "+57 3178672158",
     "url": "#",
-    "summary": "+5 años de experiencia como Desarrollador Web. Actualmente soy Desarrollador MERN. Vivo en colombia, con posibilidad de residir en españa. Tengo nociones de diferentes entornos y frameworks tales como Laravel, Django, React Native.\n Con enfasís en la biblioteca React en el Front End. Poseo disponibilidad y entusiasmo por aprender nuevas tecnologias y/o entornos de trabajo.",
+    "summary": "Desarrollador web full-stack enfocado en construir, mejorar, refactorizar y mantener sitios web, aplicaciones web y servicios basados en la nube.\n Con experiencia en desarrollo frontend y backend, trabajando con HTML, CSS, TypeScript, React, APIs, bases de datos, Next.js y flujos de trabajo modernos de desarrollo.\n Ayudo a los clientes a convertir ideas en software confiable mediante planificación cuidadosa, implementación, resolución de problemas y mejora continua.\nActualmente estoy aprendiendo Rust y profundizando mis conocimientos en seguridad web para desarrollar aplicaciones más rápidas, seguras y resilientes.",
     "location": {
       "address": "",
       "postalCode": "",

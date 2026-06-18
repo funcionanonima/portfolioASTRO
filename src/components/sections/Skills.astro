@@ -45,7 +45,7 @@ const SKILLS_ICONS: Record<string, any> = {
 };
 ---
 
-<Section title={title}>
+<Section>
 	<ul>
 		{
 			skills.map(({ name, level }) => {
@@ -54,8 +54,7 @@ const SKILLS_ICONS: Record<string, any> = {
 
 				return (
 					<li>
-						{Icon && <Icon />} <span>{name}</span>
-						<progress max="100" value={level} />
+						{Icon && <Icon />}
 					</li>
 				);
 			})
@@ -65,14 +64,13 @@ const SKILLS_ICONS: Record<string, any> = {
 
 <style>
 	ul {
-		display: inline-flex;
+		display: flex;
 		gap: 16px;
 		flex-wrap: wrap;
 		justify-content: center;
 	}
 
 	li {
-		width: 220px;
 		align-items: center;
 		background: #eee;
 		border-radius: 6px;

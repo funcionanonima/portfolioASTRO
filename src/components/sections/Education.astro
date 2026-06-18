@@ -28,7 +28,6 @@ const { title, education } = Astro.props;
 									<time>{years}</time>
 								</div>
 							</header>
-
 							<footer>
 								<p>{area}</p>
 							</footer>
@@ -41,11 +40,12 @@ const { title, education } = Astro.props;
 </Section>
 
 <style>
-	ul {
-		display: grid;
-		grid-template-columns: 1fr;
-		gap: 1.5rem;
-	}
+	 ul {
+    display: flex;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+  }
 
 	article {
 		border-radius: 12px;

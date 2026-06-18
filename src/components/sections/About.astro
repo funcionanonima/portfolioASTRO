@@ -10,7 +10,7 @@ const { title, summary } = Astro.props;
 ---
 
 <Section title={title}>
-	<p style="text-align: justify;">
+	<p style={{whiteSpace: "pre-line", textAlign: "justify" }}>
 		{summary}
 	</p>
 </Section>
