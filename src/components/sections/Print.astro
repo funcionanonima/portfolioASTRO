@@ -1,0 +1,64 @@
+---
+interface Props {
+	message: string;
+	buttonText: string;
+}
+
+const { message, buttonText } = Astro.props;
+---
+
+<section class="no-print print-box">
+	<div class="message">
+		<p>{message}</p>
+	</div>
+	<div class="actions">
+		<button class="lang-switch-btn">{buttonText}</button>
+	</div>
+</section>
+
+<style>
+	.print-box {
+		background-color: #fdfdfd;
+		border: 1px solid #eaeaea;
+		border-radius: 8px;
+		padding: 16px 24px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 24px;
+		margin: 0 auto 32px;
+		max-width: 700px; /* Para alinearse con las otras secciones */
+	}
+
+	.message p {
+		margin: 0;
+		font-size: 0.95rem;
+		color: #555;
+		line-height: 1.5;
+	}
+
+	.actions button {
+		background-color: #fff;
+		color: #333;
+		padding: 8px 16px;
+		border: 1px solid #ccc;
+		border-radius: 6px;
+		font-size: 0.9rem;
+		font-weight: 600;
+		cursor: pointer;
+		transition: all 0.2s ease;
+		white-space: nowrap;
+	}
+
+	.actions button:hover {
+		background-color: #eee;
+		border-color: #aaa;
+	}
+
+	@media (max-width: 600px) {
+		.print-box {
+			flex-direction: column;
+			text-align: center;
+		}
+	}
+</style>

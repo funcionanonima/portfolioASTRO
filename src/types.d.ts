@@ -123,4 +123,6 @@ export interface Project {
   url: string;
   github?: string;
   image?: string;
+  imagesUrl?: string[];
+  thumbnailsUrl?: string[];
 }

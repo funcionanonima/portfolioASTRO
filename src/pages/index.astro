@@ -8,6 +8,7 @@ import Education from "@/components/sections/Education.astro";
 import Projects from "@/components/sections/Projects.astro";
 import Hero from "@/components/sections/Hero.astro";
 import Languages from "@/components/sections/Languages.astro";
+import Print from "@/components/sections/Print.astro";
 
 import cvEs from "@cv";
 import cvEn from "@cv_eng";
@@ -23,12 +24,12 @@ const i18n = {
 			phoneTitle: "Llamar a",
 			socialTitle: "Visitar el perfil de",
 		},
-		aboutTitle: "Acerca de..",
-		experienceTitle: "Experiencia laboral",
-		educationTitle: "Educación",
-		languagesTitle: "Idiomas",
-		projectsTitle: "Proyectos",
-		skillsTitle: "Habilidades",
+		aboutTitle: "🧠 Acerca de..",
+		experienceTitle: "👷🏽‍♂️ Experiencia laboral",
+		educationTitle: "🎓 Educación",
+		languagesTitle: "🗣️ Idiomas",
+		projectsTitle: "🚀 Proyectos",
+		skillsTitle: "💻 Habilidades",
 	},
 	en: {
 		hero: {
@@ -40,12 +41,12 @@ const i18n = {
 			phoneTitle: "Call to",
 			socialTitle: "Take a look at",
 		},
-		aboutTitle: "About..",
-		experienceTitle: "Work experience",
-		educationTitle: "Education",
-		languagesTitle: "Languages",
-		projectsTitle: "Projects",
-		skillsTitle: "Skills",
+		aboutTitle: "🧠 About..",
+		experienceTitle: "👷🏽‍♂️ Work experience",
+		educationTitle: "🎓 Education",
+		languagesTitle: "🗣️ Languages",
+		projectsTitle: "🚀 Projects",
+		skillsTitle: "💻 Skills",
 	},
 };
 ---
@@ -53,15 +54,16 @@ const i18n = {
 <script>
 	class LangButton extends HTMLElement {
 		connectedCallback() {
-			const langButton = this.querySelector("button");
-			const elementoEs = this.querySelector("#elemento-es") as HTMLElement;
-			const elementoEng = this.querySelector("#elemento-eng") as HTMLElement;
+			const langButtons = this.querySelectorAll("button");
+			const elementoEs = this.querySelector(
+				"#elemento-es",
+			) as HTMLElement;
+			const elementoEng = this.querySelector(
+				"#elemento-eng",
+			) as HTMLElement;
 
 			const updateDisplay = (lang: string) => {
 				this.dataset.languaje = lang;
-				if (langButton) {
-					langButton.textContent = lang === "es" ? "Ingles" : "Spanish";
-				}
 				if (lang === "es") {
 					elementoEs.style.display = "block";
 					elementoEng.style.display = "none";
@@ -75,11 +77,13 @@ const i18n = {
 			const savedLang = localStorage.getItem("preferred-lang") || "es";
 			updateDisplay(savedLang);
 
-			langButton?.addEventListener("click", () => {
-				const currentlang = this.dataset.languaje;
-				const newLang = currentlang === "es" ? "eng" : "es";
-				localStorage.setItem("preferred-lang", newLang);
-				updateDisplay(newLang);
+			langButtons.forEach((btn) => {
+				btn.addEventListener("click", () => {
+					const currentlang = this.dataset.languaje;
+					const newLang = currentlang === "es" ? "eng" : "es";
+					localStorage.setItem("preferred-lang", newLang);
+					updateDisplay(newLang);
+				});
 			});
 		}
 	}
@@ -90,24 +94,43 @@ const i18n = {
 <main>
 	<lang-button data-languaje="es">
 		<div id="elemento-es" style="display: block;">
+			<Print
+				message="Para obtener la versión PDF presiona CTRL+P, selecciona guardar como PDF y disfruta de esta versión imprimible. 🖨️"
+				buttonText="View in English"
+			/>
 			<Hero basics={cvEs.basics} labels={i18n.es.hero} />
 			<About title={i18n.es.aboutTitle} summary={cvEs.basics.summary} />
 			<Skills title={i18n.es.skillsTitle} skills={cvEs.skills} />
-			<Education title={i18n.es.educationTitle} education={cvEs.education} />
-			<Languages title={i18n.es.languagesTitle} languages={cvEs.languages} />
+			<Education
+				title={i18n.es.educationTitle}
+				education={cvEs.education}
+			/>
+			<Languages
+				title={i18n.es.languagesTitle}
+				languages={cvEs.languages}
+			/>
 			<Experience title={i18n.es.experienceTitle} work={cvEs.work} />
 			<Projects title={i18n.es.projectsTitle} projects={cvEs.projects} />
 		</div>
 		<div id="elemento-eng" style="display: none;">
+			<Print
+				message="To get the PDF version press CTRL+P, save as PDF and enjoy this printable version. 🖨️"
+				buttonText="Ver en Español"
+			/>
 			<Hero basics={cvEn.basics} labels={i18n.en.hero} />
 			<About title={i18n.en.aboutTitle} summary={cvEn.basics.summary} />
 			<Skills title={i18n.en.skillsTitle} skills={cvEn.skills} />
-			<Education title={i18n.en.educationTitle} education={cvEn.education} />
-			<Languages title={i18n.en.languagesTitle} languages={cvEn.languages} />
+			<Education
+				title={i18n.en.educationTitle}
+				education={cvEn.education}
+			/>
+			<Languages
+				title={i18n.en.languagesTitle}
+				languages={cvEn.languages}
+			/>
 			<Experience title={i18n.en.experienceTitle} work={cvEn.work} />
 			<Projects title={i18n.en.projectsTitle} projects={cvEn.projects} />
 		</div>
-		<button class="no-print"><span>Ingles</span></button>
 	</lang-button>
 </main>
 
@@ -118,25 +141,6 @@ const i18n = {
 		width: 100%;
 	}
 	lang-button {
-	}
-	button {
-		background-color: white;
-		color: black;
-		padding: 10px;
-		border: 1px solid black;
-		border-radius: 6px;
-		font-size: 16px;
-		cursor: pointer;
-		transition: background-color 0.3s ease;
-		position: fixed; /* Posición fija en la pantalla */
-		bottom: 20px; /* Distancia desde la parte inferior */
-		right: 20px; /* Distancia desde la parte derecha */
-		padding: 10px 20px; /* Espaciado interno del botón */
-	}
-
-	button:hover {
-		background: #eee;
-		border: 1px solid black;
 	}
 
 	.about-grid {

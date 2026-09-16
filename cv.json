@@ -1,13 +1,13 @@
 {
   "basics": {
     "name": "Cristian David\n Gaviria Zapata",
-    "label": "Desarrollador Full Stack JavasCript. Con más de 5 años de experiencia",
-    "image": "https://res.cloudinary.com/djazfg2sr/image/upload/v1781734573/portfolio/me2.jpg",
+    "label": "Harness Engineer 🦺 \n Spec-Driven Development (SDD) 🤖.\n Especializado en tecnologías de software con más de 5 años de experiencia",
+    "image": "https://res.cloudinary.com/djazfg2sr/image/upload/v1789586744/me_ldegrb.jpg",
     "email": "cristiandgaviria@hotmail.com",
     "phone": "+57 3108645574",
     "phone2": "+57 3178672158",
     "url": "#",
-    "summary": "Desarrollador web full-stack enfocado en construir, mejorar, refactorizar y mantener sitios web, aplicaciones web y servicios basados en la nube.\n Con experiencia en desarrollo frontend y backend, trabajando con HTML, CSS, TypeScript, React, APIs, bases de datos, Next.js y flujos de trabajo modernos de desarrollo.\n Ayudo a los clientes a convertir ideas en software confiable mediante planificación cuidadosa, implementación, resolución de problemas y mejora continua.\nActualmente estoy aprendiendo Rust y profundizando mis conocimientos en seguridad web para desarrollar aplicaciones más rápidas, seguras y resilientes.",
+    "summary": "Desarrollador de soluciones de software de la mano de las tecnologias de la inteligencia artificial y la ingenieria de software, Enfocado en construir, mejorar, refactorizar y mantener sitios web, aplicaciones y servicios basados en la nube.\n Con experiencia en desarrollo frontend y backend, trabajando con metodologias agiles y flujos de trabajo modernos de desarrollo Agnostico a frameworks y lenguajes dando espacio a la diversidad de soluciones a implementar.\n Ayudo a los clientes a convertir ideas en software confiable mediante planificación cuidadosa, implementación, resolución de problemas y mejora continua.\nActualmente ampliando conocimientos en servicios de la nube y aplicaciones moviles",
     "location": {
       "address": "",
       "postalCode": "",
@@ -36,7 +36,7 @@
       "startDate": "2021-10-01",
       "endDate": "2022-01-01",
       "totalTime": "3 months",
-      "summary": "Brindé apoyo en la construcción de aplicativo FRONTEND en la biblioteca REACT. Recibiendo datos desde un backend DJANGOo en formato JSON. Aplicando las mejores practicas y correspondientes hooks.",
+      "summary": "Brindé apoyo en la construcción de aplicativo FRONTEND en la biblioteca REACT. Recibiendo datos desde un backend DJANGO en formato JSON. Aplicando las mejores practicas y correspondientes hooks.",
       "highlights": []
     },
     {
@@ -195,6 +195,16 @@
       ]
     },
     {
+      "name": "Mongo",
+      "level": "70",
+      "keywords": [
+        "Bases de Datos",
+        "No-SQL",
+        "Almacenamiento de Datos",
+        "Backend"
+      ]
+    },
+    {
       "name": "Git",
       "level": "70",
       "keywords": [
@@ -240,6 +250,41 @@
       "keywords": [
         "sys admin"
       ]
+    },
+    {
+      "name": "OpenCode",
+      "level": "80",
+      "keywords": [
+        "Agents",
+        "IA"
+      ]
+    },
+    {
+      "name": "NestJS",
+      "level": "80",
+      "keywords": [
+        "Desarrollo Web",
+        "Backend",
+        "Node.js"
+      ]
+    },
+    {
+      "name": "Docker",
+      "level": "70",
+      "keywords": [
+        "Docker",
+        "Devops",
+        "Contenedor"
+      ]
+    },
+    {
+      "name": "LMStudio",
+      "level": "70",
+      "keywords": [
+        "LLM's",
+        "Local",
+        "IA"
+      ]
     }
   ],
   "languages": [
@@ -269,61 +314,95 @@
   ],
   "projects": [
     {
-      "name": "Cart",
-      "github": "https://github.com/funcionanonima/react_canon/tree/main/projects/06-shopping-cart",
+      "name": "CLI IA Chat 🤖",
+      "github": "",
       "isActive": true,
-      "description": "Aplicacion react - Carro de compras, context hooks",
+      "description": "Chat de texto impulsado con IA se usa mediante la consola(PROMT, TERMINAL...) y servicio web API, un scrpt sencillo que corre en el entorno local, usando nodejs",
       "highlights": [
-        "React",
-        "React Hooks",
-        "Custom hooks",
-        "Context Hooks"
+        "Chat IA",
+        "Servicio web API",
+        "Gemini"
       ],
-      "url": "https://cart-two-beryl.vercel.app/",
-      "image": "https://res.cloudinary.com/djazfg2sr/image/upload/v1772403396/portfolio/06_wvgkbv.png"
+      "url": "",
+      "thumbnailsUrl": [
+        "https://res.cloudinary.com/djazfg2sr/image/upload/c_thumb,w_200,g_face/v1789568718/portfolio/ia1_am459t.png",
+        "https://res.cloudinary.com/djazfg2sr/image/upload/c_thumb,w_200,g_face/v1789568719/portfolio/ia2_cwdmva.png"
+      ],
+      "imagesUrl": [
+        "https://res.cloudinary.com/djazfg2sr/image/upload/v1789568718/portfolio/ia1_am459t.png",
+        "https://res.cloudinary.com/djazfg2sr/image/upload/v1789568719/portfolio/ia2_cwdmva.png"
+      ]
     },
     {
-      "name": "Movies Finder",
-      "github": "https://github.com/funcionanonima/react_canon/tree/main/projects/05-prueba-tecnica-Jr",
+      "name": "Laboratorios IA 🧪",
+      "github": "",
       "isActive": true,
-      "description": "Aplicacion react - Buscador peliculas, usando hooks de alto nivel, custom hooks y optimización de rendimiento",
+      "description": "Practicas locales con LLM's",
       "highlights": [
-        "React",
-        "React Hooks",
-        "Custom hooks",
-        "API",
-        "Debounce"
+        "RAG",
+        "Agentes IA",
+        "LLM's",
+        "OpenCode",
+        "LM Studio",
+        "Ollama"
       ],
-      "url": "https://moviefinder-gold.vercel.app/",
-      "image": "https://res.cloudinary.com/djazfg2sr/image/upload/v1772403394/portfolio/05_qcwn1o.png"
+      "url": "",
+      "thumbnailsUrl": [
+        "https://res.cloudinary.com/djazfg2sr/image/upload/c_thumb,w_200,g_face/v1789568441/portfolio/lab2_phjnf8.png",
+        "https://res.cloudinary.com/djazfg2sr/image/upload/c_thumb,w_200,g_face/v1789567307/portfolio/lab1_icwjj4.png"
+      ],
+      "imagesUrl": [
+        "https://res.cloudinary.com/djazfg2sr/image/upload/v1789568441/portfolio/lab2_phjnf8.png",
+        "https://res.cloudinary.com/djazfg2sr/image/upload/v1789567307/portfolio/lab1_icwjj4.png"
+      ]
     },
     {
-      "name": "Facts Cats",
-      "github": "https://github.com/funcionanonima/react_canon/tree/main/projects/04-react-prueba-tecnica",
+      "name": "App Fullstack NextJS 🌐",
+      "github": "",
       "isActive": true,
-      "description": "Aplicacion react - Echos de gatos",
+      "description": "App Fullstack con NextJS, React, MongoDB, NestJS y Docker. Skills junto con agentes de IA. Sistema de inventario",
       "highlights": [
+        "NextJS",
         "React",
-        "React Hooks",
-        "API"
+        "MongoDB",
+        "NestJS",
+        "Docker",
+        "TypeScript"
       ],
-      "url": "https://catfacts-ashy.vercel.app/",
-      "image": "https://res.cloudinary.com/djazfg2sr/image/upload/v1772403393/portfolio/04_h5n8rs.png"
+      "url": "",
+      "thumbnailsUrl": [
+        "https://res.cloudinary.com/djazfg2sr/image/upload/c_thumb,w_200,g_face/v1789574147/portfolio/front1_ab2of5.png"
+      ],
+      "imagesUrl": [
+        "https://res.cloudinary.com/djazfg2sr/image/upload/v1789574147/portfolio/front1_ab2of5.png"
+      ]
     },
     {
-      "name": "Tree kee",
-      "github": "https://github.com/funcionanonima/react_canon/tree/main/projects/02-Tree-kee",
+      "name": "Backend NestJS 🗃️",
+      "github": "",
       "isActive": true,
-      "description": "Aplicacion react - Juego Tree - kee",
+      "description": "Backend NestJS con API REST de la mano de la IA usando skills y agentes",
       "highlights": [
-        "React",
-        "React Hooks"
+        "NestJS",
+        "Docker",
+        "PostgreSQL",
+        "TypeScript",
+        "Swagger"
       ],
-      "url": "https://treekee.vercel.app/",
-      "image": "https://res.cloudinary.com/djazfg2sr/image/upload/v1772403391/portfolio/03_bhot4j.png"
+      "url": "",
+      "thumbnailsUrl": [
+        "https://res.cloudinary.com/djazfg2sr/image/upload/c_thumb,w_200,g_face/v1789569505/portfolio/back1_eludsa.png",
+        "https://res.cloudinary.com/djazfg2sr/image/upload/c_thumb,w_200,g_face/v1789569506/portfolio/back2_ychzqc.png",
+        "https://res.cloudinary.com/djazfg2sr/image/upload/c_thumb,w_200,g_face/v1789569504/portfolio/back3_mdd7ua.png"
+      ],
+      "imagesUrl": [
+        "https://res.cloudinary.com/djazfg2sr/image/upload/v1789569505/portfolio/back1_eludsa.png",
+        "https://res.cloudinary.com/djazfg2sr/image/upload/v1789569506/portfolio/back2_ychzqc.png",
+        "https://res.cloudinary.com/djazfg2sr/image/upload/v1789569504/portfolio/back3_mdd7ua.png"
+      ]
     },
     {
-      "name": "Camicommerce",
+      "name": "Camicommerce 🛒",
       "github": "",
       "isActive": true,
       "description": "Tienda ecommerce fullstack MERN",
@@ -334,36 +413,12 @@
         "ExpressJS"
       ],
       "url": "https://camicommerce.vercel.app/",
-      "image": "https://res.cloudinary.com/djazfg2sr/image/upload/v1772403400/portfolio/cami_curiqz.png"
-    },
-    {
-      "name": "Store API",
-      "github": "https://github.com/funcionanonima/store",
-      "isActive": false,
-      "description": "Back End para una tienda echa con expressJS",
-      "highlights": [
-        "ExpressJS",
-        "MongoDB",
-        "Mongoose",
-        "JWTAuth"
+      "thumbnailsUrl": [
+        "https://res.cloudinary.com/djazfg2sr/image/upload/c_thumb,w_200,g_face/v1772403400/portfolio/cami_curiqz.png"
       ],
-      "url": "https://youtu.be/43OV0m0ZZp0",
-      "image": "https://res.cloudinary.com/djazfg2sr/image/upload/v1772403398/portfolio/api_qptxfl.png"
-    },
-    {
-      "name": "Tagram",
-      "github": "",
-      "isActive": false,
-      "description": "Red social stack MERN",
-      "highlights": [
-        "ExpressJS",
-        "MongoDB",
-        "Mongoose",
-        "ReactJS",
-        "MERN"
-      ],
-      "url": "https://youtu.be/C9Qb4QqXdeM",
-      "image": "https://res.cloudinary.com/djazfg2sr/image/upload/v1772403409/portfolio/tagram_cjkgcp.png"
+      "imagesUrl": [
+        "https://res.cloudinary.com/djazfg2sr/image/upload/v1772403400/portfolio/cami_curiqz.png"
+      ]
     }
   ]
 }

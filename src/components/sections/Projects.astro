@@ -15,33 +15,69 @@ const { title, projects } = Astro.props;
 	<ul>
 		{
 			projects.map(
-				({ name, isActive, description, highlights, url, github, image }) => {
+				({
+					name,
+					isActive,
+					description,
+					highlights,
+					url,
+					github,
+					imagesUrl,
+					thumbnailsUrl,
+					image,
+				}) => {
+					const thumbnails =
+						thumbnailsUrl && thumbnailsUrl.length > 0
+							? thumbnailsUrl
+							: imagesUrl && imagesUrl.length > 0
+								? imagesUrl
+								: image
+									? [image]
+									: [];
+
+					const fullImages =
+						imagesUrl && imagesUrl.length > 0 ? imagesUrl : thumbnails;
+
 					return (
 						<li>
 							<article>
 								<header>
 									<div class="project-title-container">
 										<h3>{name}</h3>
-										<a
-											href={url}
-											title={`Ver proyecto ${name}`}
-											target="_blank"
-										>
-											{url}
-										</a>
+										{url && (
+											<a
+												href={url}
+												title={`Ver proyecto ${name}`}
+												target="_blank"
+												rel="noopener noreferrer"
+											>
+												{url}
+											</a>
+										)}
 									</div>
 									<div class="project-content">
-										{image && (
-											<div class="project-image">
-												<a
-													href={url}
-													title={`Ver proyecto ${name}`}
-													target="_blank"
-												>
-													<figure>
-														<img src={image} alt={name} />
-													</figure>
-												</a>
+										{thumbnails.length > 0 && (
+											<div class="project-images">
+												{thumbnails.map((thumb, index) => {
+													const fullImg = fullImages[index] || thumb;
+													return (
+														<a
+															href={fullImg}
+															title={`Ver captura ${index + 1} de ${name}`}
+															aria-label={`Ver captura ${index + 1} de ${name}`}
+															target="_blank"
+															rel="noopener noreferrer"
+														>
+															<figure>
+																<img
+																	src={thumb}
+																	alt={`${name} - Captura ${index + 1}`}
+																	loading="lazy"
+																/>
+															</figure>
+														</a>
+													);
+												})}
 											</div>
 										)}
 										<div class="project-details">
@@ -54,6 +90,7 @@ const { title, projects } = Astro.props;
 													<a
 														href={github}
 														target="_blank"
+														rel="noopener noreferrer"
 														title={`Ver código fuente del proyecto ${name}`}
 													>
 														{github}
@@ -76,6 +113,7 @@ const { title, projects } = Astro.props;
 		}
 	</ul>
 </Section>
+
 <style>
 	ul {
 		display: grid;
@@ -132,35 +170,59 @@ const { title, projects } = Astro.props;
 	}
 
 	.project-content {
-		display: grid;
-		grid-template-columns: auto 1fr;
-		gap: 24px;
-		align-items: start;
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		align-items: center;
+		width: 100%;
 	}
 
-	.project-image {
-		flex-shrink: 0;
+	.project-images {
+		display: flex;
+		align-items: center;
+		gap: 14px;
+		width: 50%;
+	}
+
+	.project-images a {
+		display: block;
+		border-radius: 8px;
+		overflow: hidden;
+		transition:
+			transform 0.2s ease,
+			box-shadow 0.2s ease;
+		width: 100%;
+		max-width: 380px;
+	}
+
+	.project-images a:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 	}
 
 	figure {
 		margin: 0;
 		padding: 0;
+		display: flex;
+		justify-content: center;
 	}
 
 	img {
 		aspect-ratio: 16 / 9;
 		object-fit: cover;
-		width: 240px;
+		width: 100%;
 		border-radius: 8px;
-		border: 1px solid #eee;
-		background: #fdfdfd;
+		display: block;
 	}
 
 	.project-details {
 		display: flex;
 		flex-direction: column;
 		gap: 12px;
-		text-align: left;
+		text-align: center;
+		width: 100%;
+		max-width: 560px;
+		margin: 0 auto;
 	}
 
 	article p {
@@ -168,7 +230,7 @@ const { title, projects } = Astro.props;
 		line-height: 1.5;
 		margin: 0;
 		color: #444;
-		text-align: justify;
+		text-align: center;
 	}
 
 	.github-link {
@@ -219,24 +281,22 @@ const { title, projects } = Astro.props;
 	}
 
 	@media (max-width: 768px) {
-		.project-content {
-			grid-template-columns: 1fr;
-			gap: 16px;
-		}
-
-		img {
-			width: 100%;
-			max-width: 100%;
-		}
-
 		article {
 			padding: 16px;
+		}
+
+		.project-images a {
+			max-width: 100%;
 		}
 	}
 
 	@media print {
 		article {
-			border: 1px solid #000;
+			break-inside: avoid;
+		}
+
+		.project-images a {
+			max-width: 280px;
 		}
 	}
 </style>

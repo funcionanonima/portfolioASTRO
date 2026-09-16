@@ -1,13 +1,13 @@
 {
   "basics": {
     "name": "Cristian David\n Gaviria Zapata",
-    "label": "JavasCript Full Stack Developer. More than 5 years of experience",
-    "image": "https://res.cloudinary.com/djazfg2sr/image/upload/v1781734573/portfolio/me2.jpg",
+    "label": "Harness Engineer 🦺 \n Spec-Driven Development (SDD) 🤖.\n Specialized in software technologies with over 5 years of experience",
+    "image": "https://res.cloudinary.com/djazfg2sr/image/upload/v1789586744/me_ldegrb.jpg",
     "email": "cristiandgaviria@hotmail.com",
     "phone": "+57 3108645574",
     "phone2": "+57 3178672158",
     "url": "#",
-    "summary": "Full-stack web developer focused on building, improving, refactoring, and maintaining websites, web applications, and cloud-based services.\n Experienced in both frontend and backend development, working with HTML, CSS, TypeScript, React, APIs, databases, NEXTJS, and modern development workflows.\n I help clients turn ideas into reliable software through careful planning, implementation, troubleshooting, and continuous improvement.\n Currently learning Rust and deepening my knowledge of web security to develop faster, safer, and more resilient applications.",
+    "summary": "Software solutions developer leveraging artificial intelligence technologies and software engineering, focused on building, improving, refactoring, and maintaining websites, applications, and cloud-based services.\n Experienced in frontend and backend development, working with agile methodologies and modern development workflows. Framework and language agnostic, embracing a wide range of solutions to implement.\n I help clients turn ideas into reliable software through careful planning, implementation, troubleshooting, and continuous improvement.\n Currently expanding knowledge in cloud services and mobile applications",
     "location": {
       "address": "",
       "postalCode": "",
@@ -32,21 +32,21 @@
     {
       "name": "Green",
       "position": "Front End Developer",
-      "url": "",
+      "url": "www.google.com",
       "startDate": "2021-10-01",
       "endDate": "2022-01-01",
       "totalTime": "3 months",
-      "summary": "I provided support in the construction of the FRONTEND application in the REACT library. Receiving data from a DJANGO backend in JSON format. Applying the best practices and corresponding hooks.",
+      "summary": "I provided support in building a FRONTEND application using the REACT library. Receiving data from a DJANGO backend in JSON format. Applying best practices and corresponding hooks.",
       "highlights": []
     },
     {
       "name": "API google - classroom",
-      "position": "Back End Development",
+      "position": "Back End Developer",
       "url": "#",
       "startDate": "2021-04-01",
       "endDate": "2021-07-30",
       "totalTime": "3 months",
-      "summary": "I provided support for creation of resources in the BACKEND using PYTHON and its library flask.",
+      "summary": "I provided support for creating BACKEND resources using PYTHON and its Flask library",
       "highlights": []
     },
     {
@@ -56,17 +56,17 @@
       "endDate": "2021-06-30",
       "totalTime": "9 months",
       "url": "#",
-      "summary": "I developed a task platform using the LARAVEL framework. Database with their rerspective relathionships and normalization. An API to consume the information, UI for users, Ui for admins. (Login, session, management, middlewares, management of both static and dynamic information, generation of reports)",
+      "summary": "I developed a task platform using the LARAVEL framework. Database design with relationships and normalization. An API to consume information, user UI, admin UI. (Login, session management, middlewares, handling both static and dynamic data, report generation)",
       "highlights": []
     },
     {
       "name": "DomiciliosHost",
-      "position": "Front End Development",
+      "position": "Front End Developer",
       "startDate": "2020-05-01",
       "endDate": "2020-07-30",
       "totalTime": "3 months",
       "url": "#",
-      "summary": "I provided support in the layout and constuction of components, state management and the variety of hooks provided by the REACT library in combination with TYPESCRIPT. According to the demands of the sprint and delivery times",
+      "summary": "I provided support in the layout and component construction, state management, and the various hooks provided by the REACT library in combination with TYPESCRIPT. According to sprint requirements and delivery timelines",
       "highlights": []
     }
   ],
@@ -87,7 +87,7 @@
     {
       "institution": "SENA",
       "url": "https://www.sena.edu.co/es-co/Paginas/default.aspx",
-      "area": "Technologist in software analysis and development",
+      "area": "Technologist in Software Analysis and Development",
       "studyType": "Technology",
       "startDate": "2018-06-01",
       "endDate": "2020-07-14",
@@ -131,7 +131,7 @@
       "name": "HTML",
       "level": "80",
       "keywords": [
-        "Web Developer",
+        "Web Development",
         "Frontend"
       ]
     },
@@ -139,7 +139,7 @@
       "name": "CSS",
       "level": "80",
       "keywords": [
-        "Web Developer",
+        "Web Development",
         "Frontend",
         "Responsive Design"
       ]
@@ -148,7 +148,7 @@
       "name": "JavaScript",
       "level": "80",
       "keywords": [
-        "Web Developer",
+        "Web Development",
         "Frontend",
         "Backend",
         "Fullstack"
@@ -158,7 +158,7 @@
       "name": "Tailwind",
       "level": "70",
       "keywords": [
-        "Web Developer",
+        "Web Development",
         "Frontend",
         "CSS Framework",
         "Responsive Design"
@@ -168,16 +168,17 @@
       "name": "TypeScript",
       "level": "70",
       "keywords": [
-        "Web Developer",
+        "Web Development",
         "Frontend",
-        "Backend"
+        "Backend",
+        "JavaScript Superset"
       ]
     },
     {
       "name": "Node",
       "level": "70",
       "keywords": [
-        "Web Developer",
+        "Web Development",
         "Backend",
         "JavaScript",
         "Server"
@@ -187,8 +188,18 @@
       "name": "MySQL",
       "level": "70",
       "keywords": [
-        "data Bases",
+        "Databases",
         "SQL",
+        "Data Storage",
+        "Backend"
+      ]
+    },
+    {
+      "name": "Mongo",
+      "level": "70",
+      "keywords": [
+        "Databases",
+        "No-SQL",
         "Data Storage",
         "Backend"
       ]
@@ -198,7 +209,7 @@
       "level": "70",
       "keywords": [
         "Version Control",
-        "Collab",
+        "Collaboration",
         "Source Code"
       ]
     },
@@ -207,7 +218,7 @@
       "level": "70",
       "keywords": [
         "Version Control",
-        "Collab",
+        "Collaboration",
         "Source Code",
         "Git"
       ]
@@ -216,7 +227,7 @@
       "name": "Next.js",
       "level": "80",
       "keywords": [
-        "Web Developer",
+        "Web Development",
         "Frontend",
         "React Framework",
         "SSR",
@@ -227,7 +238,7 @@
       "name": "React",
       "level": "90",
       "keywords": [
-        "Web Developer",
+        "Web Development",
         "Frontend",
         "JavaScript Library",
         "UI"
@@ -239,16 +250,51 @@
       "keywords": [
         "sys admin"
       ]
+    },
+    {
+      "name": "OpenCode",
+      "level": "80",
+      "keywords": [
+        "Agents",
+        "AI"
+      ]
+    },
+    {
+      "name": "NestJS",
+      "level": "80",
+      "keywords": [
+        "Web Development",
+        "Backend",
+        "Node.js"
+      ]
+    },
+    {
+      "name": "Docker",
+      "level": "70",
+      "keywords": [
+        "Docker",
+        "DevOps",
+        "Container"
+      ]
+    },
+    {
+      "name": "LMStudio",
+      "level": "70",
+      "keywords": [
+        "LLMs",
+        "Local",
+        "AI"
+      ]
     }
   ],
   "languages": [
     {
       "language": "Spanish",
-      "fluency": "Native Languaje"
+      "fluency": "Native language"
     },
     {
       "language": "English",
-      "fluency": "Advanzed B2"
+      "fluency": "Advanced B2"
     }
   ],
   "interests": [
@@ -268,101 +314,111 @@
   ],
   "projects": [
     {
-      "name": "Cart",
-      "github": "https://github.com/funcionanonima/react_canon/tree/main/projects/06-shopping-cart",
-      "isActive": true,
-      "description": "React APP - Shopping cart, context hooks",
-      "highlights": [
-        "React",
-        "React Hooks",
-        "Custom hooks",
-        "Context Hooks"
-      ],
-      "url": "https://cart-two-beryl.vercel.app/",
-      "image": "https://res.cloudinary.com/djazfg2sr/image/upload/v1772403396/portfolio/06_wvgkbv.png"
-    },
-    {
-      "name": "Movies Finder",
-      "github": "https://github.com/funcionanonima/react_canon/tree/main/projects/05-prueba-tecnica-Jr",
-      "isActive": true,
-      "description": "React APP - Movies finder, usig high level react hooks, custom hooks and performance optimization",
-      "highlights": [
-        "React",
-        "React Hooks",
-        "Custom hooks",
-        "API",
-        "Debounce"
-      ],
-      "url": "https://moviefinder-gold.vercel.app/",
-      "image": "https://res.cloudinary.com/djazfg2sr/image/upload/v1772403394/portfolio/05_qcwn1o.png"
-    },
-    {
-      "name": "Facts Cats",
-      "github": "https://github.com/funcionanonima/react_canon/tree/main/projects/04-react-prueba-tecnica",
-      "isActive": true,
-      "description": "React APP - Cats facts",
-      "highlights": [
-        "React",
-        "React Hooks",
-        "API"
-      ],
-      "url": "https://catfacts-ashy.vercel.app/",
-      "image": "https://res.cloudinary.com/djazfg2sr/image/upload/v1772403393/portfolio/04_h5n8rs.png"
-    },
-    {
-      "name": "Tree kee",
-      "github": "https://github.com/funcionanonima/react_canon/tree/main/projects/02-Tree-kee",
-      "isActive": true,
-      "description": "React APP - Tree kee game",
-      "highlights": [
-        "React",
-        "React Hooks"
-      ],
-      "url": "https://treekee.vercel.app/",
-      "image": "https://res.cloudinary.com/djazfg2sr/image/upload/v1772403391/portfolio/03_bhot4j.png"
-    },
-    {
-      "name": "Camicommerce",
+      "name": "CLI AI Chat 🤖",
       "github": "",
       "isActive": true,
-      "description": "Ecommerce fullstack MERN",
+      "description": "AI-powered text chat used via console (PROMPT, TERMINAL...) and web API service, a simple script running in local environment, using Node.js",
       "highlights": [
-        "Ecommerce",
-        "PayPal",
-        "Hooks react",
+        "AI Chat",
+        "Web API Service",
+        "Gemini"
+      ],
+      "url": "",
+      "thumbnailsUrl": [
+        "https://res.cloudinary.com/djazfg2sr/image/upload/c_thumb,w_200,g_face/v1789568718/portfolio/ia1_am459t.png",
+        "https://res.cloudinary.com/djazfg2sr/image/upload/c_thumb,w_200,g_face/v1789568719/portfolio/ia2_cwdmva.png"
+      ],
+      "imagesUrl": [
+        "https://res.cloudinary.com/djazfg2sr/image/upload/v1789568718/portfolio/ia1_am459t.png",
+        "https://res.cloudinary.com/djazfg2sr/image/upload/v1789568719/portfolio/ia2_cwdmva.png"
+      ]
+    },
+    {
+      "name": "AI Labs 🧪",
+      "github": "",
+      "isActive": true,
+      "description": "Local hands-on experimentation with LLMs",
+      "highlights": [
+        "RAG",
+        "AI Agents",
+        "LLMs",
+        "OpenCode",
+        "LM Studio",
+        "Ollama"
+      ],
+      "url": "",
+      "thumbnailsUrl": [
+        "https://res.cloudinary.com/djazfg2sr/image/upload/c_thumb,w_200,g_face/v1789568441/portfolio/lab2_phjnf8.png",
+        "https://res.cloudinary.com/djazfg2sr/image/upload/c_thumb,w_200,g_face/v1789567307/portfolio/lab1_icwjj4.png"
+      ],
+      "imagesUrl": [
+        "https://res.cloudinary.com/djazfg2sr/image/upload/v1789568441/portfolio/lab2_phjnf8.png",
+        "https://res.cloudinary.com/djazfg2sr/image/upload/v1789567307/portfolio/lab1_icwjj4.png"
+      ]
+    },
+    {
+      "name": "NextJS Fullstack App 🌐",
+      "github": "",
+      "isActive": true,
+      "description": "Fullstack app with NextJS, React, MongoDB, NestJS, and Docker. Skills alongside AI agents. Inventory system",
+      "highlights": [
+        "NextJS",
+        "React",
+        "MongoDB",
+        "NestJS",
+        "Docker",
+        "TypeScript"
+      ],
+      "url": "",
+      "thumbnailsUrl": [
+        "https://res.cloudinary.com/djazfg2sr/image/upload/c_thumb,w_200,g_face/v1789574147/portfolio/front1_ab2of5.png"
+      ],
+      "imagesUrl": [
+        "https://res.cloudinary.com/djazfg2sr/image/upload/v1789574147/portfolio/front1_ab2of5.png"
+      ]
+    },
+    {
+      "name": "NestJS Backend 🗃️",
+      "github": "",
+      "isActive": true,
+      "description": "NestJS backend with REST API powered by AI using skills and agents",
+      "highlights": [
+        "NestJS",
+        "Docker",
+        "PostgreSQL",
+        "TypeScript",
+        "Swagger"
+      ],
+      "url": "",
+      "thumbnailsUrl": [
+        "https://res.cloudinary.com/djazfg2sr/image/upload/c_thumb,w_200,g_face/v1789569505/portfolio/back1_eludsa.png",
+        "https://res.cloudinary.com/djazfg2sr/image/upload/c_thumb,w_200,g_face/v1789569506/portfolio/back2_ychzqc.png",
+        "https://res.cloudinary.com/djazfg2sr/image/upload/c_thumb,w_200,g_face/v1789569504/portfolio/back3_mdd7ua.png"
+      ],
+      "imagesUrl": [
+        "https://res.cloudinary.com/djazfg2sr/image/upload/v1789569505/portfolio/back1_eludsa.png",
+        "https://res.cloudinary.com/djazfg2sr/image/upload/v1789569506/portfolio/back2_ychzqc.png",
+        "https://res.cloudinary.com/djazfg2sr/image/upload/v1789569504/portfolio/back3_mdd7ua.png"
+      ]
+    },
+    {
+      "name": "Camicommerce 🛒",
+      "github": "",
+      "isActive": true,
+      "description": "Fullstack MERN e-commerce store",
+      "highlights": [
+        "E-commerce",
+        "PayPal Platform",
+        "React Hooks",
         "ExpressJS"
       ],
       "url": "https://camicommerce.vercel.app/",
-      "image": "https://res.cloudinary.com/djazfg2sr/image/upload/v1772403400/portfolio/cami_curiqz.png"
-    },
-    {
-      "name": "Store API",
-      "github": "https://github.com/funcionanonima/store",
-      "isActive": false,
-      "description": "ExpressJS store backend",
-      "highlights": [
-        "ExpressJS",
-        "MongoDB",
-        "Mongoose",
-        "JWTAuth"
+      "thumbnailsUrl": [
+        "https://res.cloudinary.com/djazfg2sr/image/upload/c_thumb,w_200,g_face/v1772403400/portfolio/cami_curiqz.png"
       ],
-      "url": "https://youtu.be/43OV0m0ZZp0",
-      "image": "https://res.cloudinary.com/djazfg2sr/image/upload/v1772403398/portfolio/api_qptxfl.png"
-    },
-    {
-      "name": "Tagram",
-      "github": "",
-      "isActive": false,
-      "description": "Instagram MERN",
-      "highlights": [
-        "ExpressJS",
-        "MongoDB",
-        "Mongoose",
-        "ReactJS",
-        "MERN"
-      ],
-      "url": "https://youtu.be/C9Qb4QqXdeM",
-      "image": "https://res.cloudinary.com/djazfg2sr/image/upload/v1772403409/portfolio/tagram_cjkgcp.png"
+      "imagesUrl": [
+        "https://res.cloudinary.com/djazfg2sr/image/upload/v1772403400/portfolio/cami_curiqz.png"
+      ]
     }
   ]
 }

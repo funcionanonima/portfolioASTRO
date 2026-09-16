@@ -36,9 +36,19 @@ const lkUrl = lkInInfo?.url;
 <Section>
 	<div class="container">
 		<div class="info">
-			<h1 style={{whiteSpace: "pre-line", textAlign: "justify", marginBottom:0, lineHeiht:1 }}>
-				{name}</h1>
-			<h2 style="margin:0;">{label}</h2>
+			<h1
+				style={{
+					whiteSpace: "pre-line",
+					textAlign: "justify",
+					marginBottom: 0,
+					lineHeiht: 1,
+				}}
+			>
+				{name}
+			</h1>
+			<h2 style={{ whiteSpace: "pre-line", textAlign: "justify" }}>
+				{label}
+			</h2>
 			<span>
 				<WorldMap />
 				{city}, {region}
@@ -52,6 +62,9 @@ const lkUrl = lkInInfo?.url;
 							target="_blank"
 						>
 							<Mail />
+							<span class="sr-only">
+								{labels.mailTitle} {name}
+							</span>
 						</a>
 					)
 				}
@@ -63,6 +76,9 @@ const lkUrl = lkInInfo?.url;
 							target="_blank"
 						>
 							<Phone />
+							<span class="sr-only">
+								{labels.phoneTitle} {name}
+							</span>
 						</a>
 					)
 				}
@@ -74,6 +90,9 @@ const lkUrl = lkInInfo?.url;
 							target="_blank"
 						>
 							<Phone2 />
+							<span class="sr-only">
+								{labels.phoneTitle} {name}
+							</span>
 						</a>
 					)
 				}
@@ -89,6 +108,9 @@ const lkUrl = lkInInfo?.url;
 								rel="noopener noreferrer"
 							>
 								<Icon />
+								<span class="sr-only">
+									{labels.socialTitle} {name} {network}
+								</span>
 							</a>
 						);
 					})
@@ -128,9 +150,8 @@ const lkUrl = lkInInfo?.url;
 	}
 
 	img {
-		aspect-ratio: 1 / 1;
 		object-fit: contain;
-		width: 128px;
+		width: 132px;
 		border-radius: 16px;
 	}
 
@@ -167,6 +188,18 @@ const lkUrl = lkInInfo?.url;
 	footer a:hover {
 		background: #eee;
 		border: 1px solid #ddd;
+	}
+
+	.sr-only {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		padding: 0;
+		margin: -1px;
+		overflow: hidden;
+		clip: rect(0, 0, 0, 0);
+		white-space: nowrap;
+		border-width: 0;
 	}
 
 	@media (width <= 700px) {

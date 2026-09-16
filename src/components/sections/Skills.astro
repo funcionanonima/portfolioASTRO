@@ -16,6 +16,11 @@ import SwiftUI from "@/icons/swiftui.astro";
 import Kotlin from "@/icons/kotlin.astro";
 import Flutter from "@/icons/flutter.astro";
 import GNULinux from "@/icons/GNULinux.astro";
+import Mongo from "@/icons/mongo.astro";
+import Docker from "@/icons/docker.astro";
+import NestJS from "@/icons/nestjs.astro";
+import OpenCode from "@/icons/opencode.astro";
+import LMStudio from "@/icons/lm.astro";
 import type { Skill } from "@/types";
 
 interface Props {
@@ -42,19 +47,122 @@ const SKILLS_ICONS: Record<string, any> = {
 	Kotlin,
 	Flutter,
 	GNULinux,
+	Mongo,
+	Docker,
+	NestJS,
+	OpenCode,
+	LMStudio,
+};
+
+const isEn = title.toLowerCase() === "skills";
+
+const CATEGORIES = [
+	{ id: "backend", title: "Backend" },
+	{ id: "frontend", title: "Frontend" },
+	{ id: "devops", title: "DevOps" },
+	{ id: "ai", title: isEn ? "AI / Agents" : "IA / Agents" },
+];
+
+const SKILL_CATEGORY: Record<string, string> = {
+	HTML: "frontend",
+	CSS: "frontend",
+	JavaScript: "frontend",
+	TypeScript: "frontend",
+	Tailwind: "frontend",
+	React: "frontend",
+	"Next.js": "frontend",
+	Next: "frontend",
+	Swift: "frontend",
+	SwiftUI: "frontend",
+	Kotlin: "frontend",
+	Flutter: "frontend",
+
+	Node: "backend",
+	"Node.js": "backend",
+	NestJS: "backend",
+	MySQL: "backend",
+	Mongo: "backend",
+	MongoDB: "backend",
+
+	Git: "devops",
+	GitHub: "devops",
+	Docker: "devops",
+	GNULinux: "devops",
+	Linux: "devops",
+
+	OpenCode: "ai",
+	LMStudio: "ai",
+};
+
+const getCategory = (skill: Skill): string => {
+	if (SKILL_CATEGORY[skill.name]) {
+		return SKILL_CATEGORY[skill.name];
+	}
+	const kw = (skill.keywords || []).map((k) => k.toLowerCase());
+	if (
+		kw.some(
+			(k) => k.includes("agent") || k.includes("ia") || k.includes("ai"),
+		)
+	)
+		return "ai";
+	if (
+		kw.some(
+			(k) =>
+				k.includes("devops") ||
+				k.includes("docker") ||
+				k.includes("admin") ||
+				k.includes("git") ||
+				k.includes("control"),
+		)
+	)
+		return "devops";
+	if (
+		kw.some(
+			(k) =>
+				k.includes("backend") ||
+				k.includes("sql") ||
+				k.includes("servidor") ||
+				k.includes("server") ||
+				k.includes("base") ||
+				k.includes("data storage"),
+		)
+	)
+		return "backend";
+	return "frontend";
 };
 ---
 
-<Section>
-	<ul>
+<Section title={title}>
+	<ul class="categories">
 		{
-			skills.map(({ name, level }) => {
-				const iconName = name === "Next.js" ? "Next" : name;
-				const Icon = SKILLS_ICONS[iconName];
+			CATEGORIES.map((cat) => {
+				const catSkills = skills.filter(
+					(s) => getCategory(s) === cat.id,
+				);
+				if (catSkills.length === 0) return null;
 
 				return (
 					<li>
-						{Icon && <Icon />}
+						<article>
+							<header>
+								<h3>{cat.title}</h3>
+							</header>
+
+							<ul class="skills-list">
+								{catSkills.map(({ name }) => {
+									const iconName =
+										name === "Next.js" ? "Next" : name;
+									const Icon = SKILLS_ICONS[iconName];
+
+									return (
+										<li class="skill-item">
+											{Icon && <Icon />}
+											<span>{name}</span>
+										</li>
+									);
+								})}
+							</ul>
+						</article>
 					</li>
 				);
 			})
@@ -63,23 +171,84 @@ const SKILLS_ICONS: Record<string, any> = {
 </Section>
 
 <style>
-	ul {
-		display: flex;
-		gap: 16px;
-		flex-wrap: wrap;
-		justify-content: center;
+	.categories {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1.5rem;
+		list-style: none;
+		padding: 0;
+		margin: 0;
 	}
 
-	li {
+	article {
+		border-radius: 12px;
+		border: 1px solid #f2f2f2;
+		padding: 20px;
+		height: 100%;
+		transition: all 0.3s ease;
+		background: #fff;
+		display: flex;
+		flex-direction: column;
+		gap: 14px;
+		text-align: center;
+	}
+
+	article:hover {
+		border-color: #ddd;
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+	}
+
+	article h3 {
+		margin: 0;
+		font-size: 1.1rem;
+		font-weight: 700;
+		color: #111;
+	}
+
+	.skills-list {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 8px;
+		justify-content: center;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	.skill-item {
 		align-items: center;
 		background: #eee;
 		border-radius: 6px;
 		color: black;
-		display: flex;
+		display: inline-flex;
 		font-size: 0.8rem;
 		font-weight: 500;
-		gap: 10px;
-		padding: 0.5rem 0.6rem;
-		justify-content: space-between;
+		gap: 8px;
+		padding: 0.4rem 0.6rem;
+		transition: background-color 0.2s ease;
+	}
+
+	.skill-item :global(svg) {
+		flex-shrink: 0;
+	}
+
+	.skill-item:hover {
+		background: #e2e2e2;
+	}
+
+	@media (max-width: 768px) {
+		.categories {
+			grid-template-columns: 1fr;
+		}
+
+		article {
+			padding: 16px;
+		}
+	}
+
+	@media print {
+		article {
+			break-inside: avoid;
+		}
 	}
 </style>
